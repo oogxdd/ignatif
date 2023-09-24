@@ -66,3 +66,9 @@ export const tags = [
   'Azure',
   'Hasura',
 ]
+
+export const detailedTag = {
+  name: 'Apollo',
+  fields: ['Frontend', 'Backend'],
+  projects: ['Voicestory', 'Calmpaper'],
+}

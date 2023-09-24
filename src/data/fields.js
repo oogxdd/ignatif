@@ -10,4 +10,5 @@ export const detailedField = {
   name: 'Frontend',
   tags: ['React', 'Next.js', 'Tailwind.css'],
   projects: ['Mori', 'Vividaura', 'Machcast'],
+  color: '#000',
 }

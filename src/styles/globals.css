@@ -113,3 +113,33 @@ html {
 /*     color-scheme: dark; */
 /*   } */
 /* } */
+
+.timeline-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.timeline {
+  white-space: nowrap;
+  transition: transform 0.3s ease;
+}
+
+.project {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.field {
+  width: 100%;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: white;
+  border: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  padding: 5px;
+}
