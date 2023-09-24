@@ -1,152 +1,59 @@
-import { Date } from '@/components'
+import { useState } from 'react'
+import { fields, tags, projects } from '@/data'
+// import Field from '@/components/field'
+// import Tag from '@/components/tag'
+import ProjectsTimeline from '@/components/projects-timeline'
 
-// 2023
-import Clipcuts from '@/projects/2023/clipcuts'
+const HomePage = () => {
+  const [selectedFields, setSelectedFields] = useState([])
+  const [selectedTags, setSelectedTags] = useState([])
 
-// 2022
-import Soundfuck from '@/projects/2022/soundfuck'
-import Trialproofer from '@/projects/2022/trialproofer'
-import Dm6labs from '@/projects/2022/dm6labs'
-import Styleguideist from '@/projects/2022/styleguideist'
-import Vividaura from '@/projects/2022/vividaura'
-import BeatAndFlow from '@/projects/2022/beat-n-flow'
-
-// 2021
-import Hostaway from '@/projects/2021/hostaway'
-import TypeJ from '@/projects/2021/type-j'
-import TldrApp from '@/projects/2021/tldr-app'
-
-// 2020
-import Calmpaper from '@/projects/2020/calmpaper'
-import Antcmd from '@/projects/2020/antcmd'
-
-// 2019
-import Myfit from '@/projects/2019/myfit'
-import Voicestory from '@/projects/2019/voicestory'
-
-// 2018
-import Chronos from '@/projects/2018/chronos'
-import DeliverMD from '@/projects/2018/delivermd'
-import HostawayDesignDashboard from '@/projects/2018/hostaway_design_dashboard'
-
-// 2017
-import HostawayDevelopment from '@/projects/2017/hostaway_development'
-import Zenkraft from '@/projects/2017/zenkraft'
-
-// 2016
-import DBGlass from '@/projects/2016/db-glass'
-import Hypefactors from '@/projects/2016/hypefactors'
-import ReactTrelloBoard from '@/projects/2016/react-trello-board'
-
-export default () => {
   return (
-    <>
-      <div className="flex flex-col px-12 pt-20 space-y-8 min-h-screen w-screen bg-gray-50 mb-12">
-        <Date label="2023">
-          <Clipcuts />{' '}
-        </Date>
-        <Date label="2022">
-          <Trialproofer />
-          <Styleguideist />
-          <Dm6labs />
-          <Soundfuck />
-          <Vividaura />
-          <BeatAndFlow />
-        </Date>
-        <Date label="2021">
-          <TldrApp />
-          <TypeJ />
-          <Hostaway />
-        </Date>
-        <Date label="2020">
-          <Antcmd />
-          <Calmpaper />
-        </Date>
-        <Date label="2019">
-          <Myfit />
-          <Voicestory />
-        </Date>
-        <Date label="2018">
-          <HostawayDesignDashboard />
-          <Chronos />
-          <DeliverMD />
-        </Date>
-        <Date label="2017">
-          <HostawayDevelopment />
-          <Zenkraft />
-        </Date>
-        <Date label="2016">
-          <Hypefactors />
-          <DBGlass />
-          <ReactTrelloBoard />
-          {/*
-           */}
-        </Date>
-        {/*
-         */}
-        {/*
-      <span>2023</span>
-      <span>Clipcuts</span>
-      <span>2022</span>
-      <span>Trialproofer</span>
-      <span>Styleguide.ist</span>
-      <span>Soundfuck</span>
-      <span>Vividaura</span>
-      <span>2021</span>
-      <span>tldr.app</span>
-      <span>type-j</span>
-      <span>hostaway(design) - landing</span>
-      <span>calmpaper</span>
-      <span>antcmd</span>
-      <span>myfit</span>
-      <span>voicestory</span>
-      <span>hostaway(design) - dashboard</span>
-      <span>chronos</span>
-      <span>hostaway(development)</span>
-      <span>deliver md</span>
-      <span>zenkraft</span>
-      <span>hypefactors</span>
-      <span>dbglass</span>
-      <span>react-trello-board</span>
-    */}
-      </div>
-      <div className="flex flex-col self-end px-12 mb-32 mt-64">
-        <div>Maxim ignatev</div>
-        <div>Current location: Yerevan, Armenia</div>
-        <div>Date of birth: 09.02.1997</div>
-        <div>Occupation: up for cooperation</div>
+    <div className="flex flex-col justify-between items-start h-full min-h-screen w-full p-16">
+      <div className="self-end text-xl text-start leading-7">
+        hi
         <br />
-        <div>
-          Goal: new world ideology with universal basic food,
-          <br />
-          housing and medicine.
-          <br />
-          <br />
-          Progressive taxes
-          <br />
-          <br />
-          Ненасильственные изменения
-          <br />
-          <br />
-          <br />
-          Other interests:
-          <br />
-          <br />
-          <a className="text-purple-500 hover:underline cursor-pointer">
-            music
-          </a>
+        my name is Maxim
+        <br />
+        i got plenty of experience
+        <br />
+        <a
+          href="mailto:ignatif@gmail.com"
+          target="_blank"
+          className="text-blue-600"
+        >
+          discuss something with me
+        </a>
+      </div>
+      <div className="self-center">
+        <ProjectsTimeline />
+      </div>
+      <div className="flex flex-col space-y-6">
+        <div className="flex flex-wrap space-x-4">
+          {fields.map((field) => (
+            <Field field={field} key={field} />
+          ))}
+        </div>
+        <div className="flex flex-wrap gap-x-3 gap-y-3">
+          {tags.map((tag) => (
+            <Tag tag={tag} key={tag} />
+          ))}
         </div>
       </div>
-      <a
-        href="mailto:ignatif@gmail.com"
-        className="fixed top-6 right-8 hover:opacity-70 text-gray-600"
-      >
-        Contact me
-      </a>
-    </>
+    </div>
   )
 }
 
-// date of birth:
-// current location:
-// other interests (music)
+const Field = ({ field, selected = false }) => (
+  <div className="px-5 py-3 rounded-full border text-2xl font-medium text-gray-900 border-gray-300 tracking-wide hover:cursor-pointer hover:border-gray-500">
+    {field}
+  </div>
+)
+
+const Tag = ({ tag, selected = false }) => (
+  <div className="px-3 py-1.5 rounded-full border text-lg font-medium text-gray-900 border-gray-300 tracking-wide hover:cursor-pointer hover:border-gray-500">
+    {tag}
+  </div>
+)
+
+export default HomePage
