@@ -7,6 +7,7 @@ import ProjectsTimeline from '@/components/projects-timeline'
 const HomePage = () => {
   const [selectedFields, setSelectedFields] = useState([])
   const [selectedTags, setSelectedTags] = useState([])
+  const [hoveredProject, setHoveredProject] = useState(null)
 
   return (
     <div className="flex flex-col justify-between items-start h-full min-h-screen w-full p-16">
@@ -44,14 +45,36 @@ const HomePage = () => {
   )
 }
 
-const Field = ({ field, selected = false }) => (
-  <div className="px-5 py-3 rounded-full border text-2xl font-medium text-gray-900 border-gray-300 tracking-wide hover:cursor-pointer hover:border-gray-500">
+const Field = ({
+  field,
+  selected = false,
+  onSelect = () => {},
+  onHover = () => {},
+}) => (
+  <div
+    className={`px-5 py-3 rounded-full border text-2xl font-medium ${
+      selected ? 'bg-gray-200' : 'text-gray-900'
+    } border-gray-300 tracking-wide hover:cursor-pointer hover:border-gray-500`}
+    onClick={() => onSelect(field)}
+    onMouseOver={() => onHover(field)}
+  >
     {field}
   </div>
 )
 
-const Tag = ({ tag, selected = false }) => (
-  <div className="px-3 py-1.5 rounded-full border text-lg font-medium text-gray-900 border-gray-300 tracking-wide hover:cursor-pointer hover:border-gray-500">
+const Tag = ({
+  tag,
+  selected = false,
+  onSelect = () => {},
+  onHover = () => {},
+}) => (
+  <div
+    className={`px-3 py-1.5 rounded-full border text-lg font-medium ${
+      selected ? 'bg-gray-200' : 'text-gray-900'
+    } border-gray-300 tracking-wide hover:cursor-pointer hover:border-gray-500`}
+    onClick={() => onSelect(tag)}
+    onMouseOver={() => onHover(tag)}
+  >
     {tag}
   </div>
 )
