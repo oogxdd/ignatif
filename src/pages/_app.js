@@ -1,4 +1,4 @@
-import '@/styles/globals.css'
+import '@/assets/css/index.css'
 import { ThemeProvider } from 'styled-components'
 
 const theme = {

@@ -2,9 +2,6 @@ import React, { useEffect, useRef } from 'react'
 import * as d3 from 'd3'
 import { projects as dataProjects, fieldColors } from '@/data'
 
-const timelineStartDate = new Date(1997, 0, 1)
-const timelineEndDate = new Date(2030, 11, 31)
-
 const ProjectsTimeline = ({
   selectedFields = [],
   selectedTags = [],
@@ -38,10 +35,7 @@ const ProjectsTimeline = ({
       },
       mouseover(event, d) {
         Tooltip.style('opacity', 1)
-        d3.select(this)
-          .style('stroke', 'black')
-          .style('stroke-width', '0.1px')
-          .style('opacity', 1)
+        d3.select(this).style('stroke', 'black').style('opacity', 1)
       },
       mouseleave(d) {
         Tooltip.style('opacity', 0)
@@ -56,8 +50,8 @@ const ProjectsTimeline = ({
       .zoom()
       .scaleExtent([1, Infinity]) // Adjust this to limit zoom
       .translateExtent([
-        [xScale(timelineStartDate), 0],
-        [xScale(timelineEndDate), 0],
+        [xScale(new Date(1997, 0, 1)), 0],
+        [xScale(new Date(2023, 11, 31)), 0],
       ]) // New line
       .on('zoom', (event) => {
         const { x, k } = event.transform
@@ -81,8 +75,12 @@ const ProjectsTimeline = ({
       .append('g')
       .attr('transform', 'translate(0,100)')
 
+    const timelineStartDate = new Date(1997, 0, 1)
+    const timelineEndDate = new Date(2030, 11, 31)
+
     const selectedStartDate = new Date(2023, 7, 31)
-    const selectedEndDate = new Date(2016, 6, 1)
+    // const selectedEndDate = new Date(2015, 8, 15)
+    const selectedEndDate = new Date(2020, 6, 1)
 
     const xScale = d3
       .scaleTime()
@@ -129,85 +127,25 @@ const ProjectsTimeline = ({
       const projectGroup = d3.select(this)
       const totalWidth =
         xScale(new Date(d.endDate)) - xScale(new Date(d.startDate))
-
-      // Create project rectangle (100x100)
-      projectGroup
-        .append('rect')
-        .attr('x', xScale(new Date(d.startDate)))
-        .attr('y', 0)
-        .attr('width', totalWidth)
-        .attr('height', 100)
-        .attr('fill', '#d6d7d8')
-        .attr('stroke', '#949494')
-        .attr('stroke-width', '0.2px')
-        // .attr('opacity', 0.3)
-        .attr('opacity', 1)
-
-      // Initialize variable to track the 'x' coordinate of the next subrectangle
-      let offsetWidth = 0
-
-      // Width of each subrectangle
-      const subWidth = 20
-
-      // let offsetHeight = 0
-      const padding = 0.1
-      let offsetHeight = padding
+      let offsetHeight = 0
       const totalHeight = 100
-      for (const field of d.fields) {
-        // const height = totalHeight / d.fields.length
-        const height = 20
 
+      for (const field of d.fields) {
+        const height = totalHeight / d.fields.length
         projectGroup
           .append('rect')
-          .attr('x', xScale(new Date(d.startDate)) + padding)
+          .attr('x', xScale(new Date(d.startDate)))
           .attr('y', 100 - totalHeight + offsetHeight)
-          .attr('width', totalWidth - padding * 2)
+          .attr('width', totalWidth)
           .attr('height', height)
           .attr('fill', fieldColors[field])
         offsetHeight += height
       }
-
-      // Loop over fields and draw subrectangles inside project rectangle
-      // for (const field of d.fields) {
-      //   projectGroup
-      //     .append('rect')
-      //     .attr('x', xScale(new Date(d.startDate)) + offsetWidth)
-      //     .attr('y', 40) // vertically centering subrectangle in the project rectangle
-      //     .attr('width', subWidth)
-      //     .attr('height', 20)
-      //     .attr('fill', fieldColors[field])
-
-      //   offsetWidth += subWidth // Increment for the next subrectangle
-      // }
-
       projectGroup
         .on('mouseover', mouseover)
         .on('mousemove', mousemove)
         .on('mouseout', mouseleave)
     })
-    // projects.each(function (d) {
-    //   const projectGroup = d3.select(this)
-    //   const totalWidth =
-    //     xScale(new Date(d.endDate)) - xScale(new Date(d.startDate))
-    //   let offsetHeight = 0
-    //   const totalHeight = 100
-
-    //   for (const field of d.fields) {
-    //     const height = totalHeight / d.fields.length
-    //     projectGroup
-    //       .append('rect')
-    //       .attr('x', xScale(new Date(d.startDate)))
-    //       .attr('y', 100 - totalHeight + offsetHeight)
-    //       .attr('width', totalWidth)
-    //       .attr('height', height)
-    //       .attr('fill', fieldColors[field])
-    //     offsetHeight += height
-    //   }
-    //   projectGroup
-    //     .on('mouseover', mouseover)
-    //     .on('mousemove', mousemove)
-    //     .on('mouseout', mouseleave)
-    // })
   }, [selectedFields, selectedTags, hoveredProject])
 
   return <svg ref={svgRef} width="100%" height="300"></svg>

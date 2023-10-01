@@ -100,9 +100,10 @@ const HomePage = () => {
   )
 }
 
-const Label = ({ children }) => (
-  <h2 className="text-xl text-gray-600 ml-0 mb-2 font-medium">{children}</h2>
-)
+const Label = () => null
+// const Label = ({ children }) => (
+//   <h2 className="text-xl text-gray-600 ml-0 mb-2 font-medium">{children}</h2>
+// )
 
 const Field = ({
   field,

@@ -2,9 +2,6 @@ import React, { useEffect, useRef } from 'react'
 import * as d3 from 'd3'
 import { projects as dataProjects, fieldColors } from '@/data'
 
-const timelineStartDate = new Date(1997, 0, 1)
-const timelineEndDate = new Date(2030, 11, 31)
-
 const ProjectsTimeline = ({
   selectedFields = [],
   selectedTags = [],
@@ -40,7 +37,7 @@ const ProjectsTimeline = ({
         Tooltip.style('opacity', 1)
         d3.select(this)
           .style('stroke', 'black')
-          .style('stroke-width', '0.1px')
+          .style('stroke-width', '0.5px')
           .style('opacity', 1)
       },
       mouseleave(d) {
@@ -56,14 +53,22 @@ const ProjectsTimeline = ({
       .zoom()
       .scaleExtent([1, Infinity]) // Adjust this to limit zoom
       .translateExtent([
-        [xScale(timelineStartDate), 0],
-        [xScale(timelineEndDate), 0],
+        [xScale(new Date(1997, 0, 1)), 0],
+        [xScale(new Date(2023, 11, 31)), 0],
       ]) // New line
       .on('zoom', (event) => {
         const { x, k } = event.transform
         const newXScale = event.transform.rescaleX(xScale)
-        projectGroup.attr('transform', `translate(${x},0) scale(${k}, 1)`)
+        projectGroup.attr('transform', `translate(${x},0) scale(${k}, ${k})`)
         const newAxis = xAxisGroup.call(xAxis.scale(newXScale))
+
+        // Adjust square size and y position dynamically based on k
+        projectGroup
+          .selectAll('.fieldRect')
+          .attr('height', (d) => {
+            return 100 / k // or whatever logic you use to set the square size based on k
+          })
+          .attr('y', 0)
 
         // Apply tick styling here
         newAxis.selectAll('text').style('font-size', '18px')
@@ -81,8 +86,12 @@ const ProjectsTimeline = ({
       .append('g')
       .attr('transform', 'translate(0,100)')
 
+    const timelineStartDate = new Date(1997, 0, 1)
+    const timelineEndDate = new Date(2030, 11, 31)
+
     const selectedStartDate = new Date(2023, 7, 31)
-    const selectedEndDate = new Date(2016, 6, 1)
+    // const selectedEndDate = new Date(2015, 8, 15)
+    const selectedEndDate = new Date(2020, 6, 1)
 
     const xScale = d3
       .scaleTime()
@@ -129,56 +138,42 @@ const ProjectsTimeline = ({
       const projectGroup = d3.select(this)
       const totalWidth =
         xScale(new Date(d.endDate)) - xScale(new Date(d.startDate))
+      const padding = 0
+      // const padding = 1
+      const maxRectSize = 20
+      const actualRectSize = Math.min(maxRectSize, totalWidth - 2 * padding)
 
-      // Create project rectangle (100x100)
+      // Create project rectangle
       projectGroup
         .append('rect')
         .attr('x', xScale(new Date(d.startDate)))
         .attr('y', 0)
         .attr('width', totalWidth)
         .attr('height', 100)
-        .attr('fill', '#d6d7d8')
-        .attr('stroke', '#949494')
-        .attr('stroke-width', '0.2px')
-        // .attr('opacity', 0.3)
-        .attr('opacity', 1)
+        .attr('fill', 'grey')
+        .attr('opacity', 0.3)
 
-      // Initialize variable to track the 'x' coordinate of the next subrectangle
-      let offsetWidth = 0
+      let x = padding
+      let y = padding
 
-      // Width of each subrectangle
-      const subWidth = 20
-
-      // let offsetHeight = 0
-      const padding = 0.1
-      let offsetHeight = padding
-      const totalHeight = 100
+      // Loop to create inner field rectangles
       for (const field of d.fields) {
-        // const height = totalHeight / d.fields.length
-        const height = 20
+        if (x + actualRectSize + padding > totalWidth) {
+          x = padding
+          y += actualRectSize + padding
+        }
 
         projectGroup
           .append('rect')
-          .attr('x', xScale(new Date(d.startDate)) + padding)
-          .attr('y', 100 - totalHeight + offsetHeight)
-          .attr('width', totalWidth - padding * 2)
-          .attr('height', height)
+          .attr('class', 'fieldRect') // add this line
+          .attr('x', xScale(new Date(d.startDate)) + x)
+          .attr('y', y)
+          .attr('width', actualRectSize)
+          .attr('height', actualRectSize)
           .attr('fill', fieldColors[field])
-        offsetHeight += height
+
+        x += actualRectSize + padding
       }
-
-      // Loop over fields and draw subrectangles inside project rectangle
-      // for (const field of d.fields) {
-      //   projectGroup
-      //     .append('rect')
-      //     .attr('x', xScale(new Date(d.startDate)) + offsetWidth)
-      //     .attr('y', 40) // vertically centering subrectangle in the project rectangle
-      //     .attr('width', subWidth)
-      //     .attr('height', 20)
-      //     .attr('fill', fieldColors[field])
-
-      //   offsetWidth += subWidth // Increment for the next subrectangle
-      // }
 
       projectGroup
         .on('mouseover', mouseover)

@@ -2,6 +2,7 @@ export const fields = [
   'Frontend',
   'Backend',
   'UI/UX',
+  'No-code',
   'AI',
   'Founder/Co-founder',
 ]
