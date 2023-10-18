@@ -1,128 +1,109 @@
-import { useState, useEffect } from 'react'
-import { fields, tags, projects } from '@/data'
-// import Field from '@/components/field'
-// import Tag from '@/components/tag'
-import ProjectsTimeline from '@/components/projects/timeline'
-// import ProjectsTimeline from '@/components/projects-timeline/react'
+import React from 'react'
+import { projects } from '@/data/projects'
+import { formatDate } from '@/utils'
 
-const HomePage = () => {
-  // when selected
-  const [selectedFields, setSelectedFields] = useState([])
-  const [selectedTags, setSelectedTags] = useState([])
-
-  // when hover over project:
-  // highlight all related fields and tags
-  const [hoveredProject, setHoveredProject] = useState(null)
-
-  // when hover over field:
-  // highlight related projects and tags
-  const [hoveredField, setHoveredField] = useState(null)
-
-  // when hover over tag:
-  // highlight related field(s) and projects
-  const [hoveredTag, setHoveredTag] = useState(null)
-
-  useEffect(() => {
-    // ...existing event listeners
-
-    const preventTwoFingerSwipe = (e) => {
-      if (e.ctrlKey) {
-        // Usually, two-finger swipe sets the ctrlKey property to true
-        e.preventDefault()
-      }
-    }
-
-    window.addEventListener('wheel', preventTwoFingerSwipe, { passive: false })
-
-    return () => {
-      // ...existing event removers
-      window.removeEventListener('wheel', preventTwoFingerSwipe)
-    }
-  }, [])
-
-  useEffect(() => {
-    const preventDefaultBehavior = (e) => {
-      e.preventDefault()
-    }
-
-    window.addEventListener('touchmove', preventDefaultBehavior, {
-      passive: false,
-    })
-    window.addEventListener('touchstart', preventDefaultBehavior, {
-      passive: false,
-    })
-
-    return () => {
-      window.removeEventListener('touchmove', preventDefaultBehavior)
-      window.removeEventListener('touchstart', preventDefaultBehavior)
-    }
-  }, [])
-
+const List = () => {
   return (
-    <div className="flex flex-col justify-between items-start h-full min-h-screen w-full p-16">
-      <div className="self-end text-xl text-start leading-7">
-        hi
-        <br />
-        my name is Maxim
-        <br />
-        i got plenty of experience
-        <br />
-        <a
-          href="mailto:ignatif@gmail.com"
-          target="_blank"
-          className="text-blue-600"
-        >
-          discuss something with me
-        </a>
+    <div className="flex flex-col _space-y-8 divide-y p-6 px-8 max-w-4xl">
+      <div className="w-full justify-between">
+        <span>Maxim Ignatev</span>
+
+        <span>oogxdd@gmail.com</span>
       </div>
-      <div className="self-center w-screen">
-        <ProjectsTimeline />
+      <div>
+        A solution-oriented developer and UI/UX designer with a penchant for
+        turning ideas into reality. <br />
+        <br />
+        My unique design background complements my technical expertise,
+        fostering quick delivery with a keen eye for aesthetics.
+        <br />
+        <br />I value team dynamics, always ready to collaborate and compromise
+        to bring visions to life, and my communication skills bridge the gap
+        between technical and non-technical stakeholders.
       </div>
-      <div className="flex flex-col space-y-6">
-        <div className="flex flex-col">
-          <Label>Fields</Label>
-          <div className="flex flex-wrap space-x-4">
-            {fields.map((field) => (
-              <Field field={field} key={field} />
-            ))}
-          </div>
-        </div>
-        <div className="flex flex-col">
-          <Label>Technologies</Label>
-          <div className="flex flex-wrap gap-x-3 gap-y-3">
-            {tags.map((tag) => (
-              <Tag tag={tag} key={tag} />
-            ))}
-          </div>
-        </div>
+      <span>My experience:</span>
+      {projects
+        .filter((i) => !!i.list)
+        .reverse()
+        .map((project) => (
+          <Project
+            project={project}
+            key={`${project.startDate}-${project.name}`}
+          />
+        ))}
+      <div className="w-full h-screen flex items-center justify-center">
+        <a href="mailto:oogxdd@gmail.com">oogxdd@gmail.com</a>
       </div>
     </div>
   )
 }
 
-const Label = () => null
-// const Label = ({ children }) => (
-//   <h2 className="text-xl text-gray-600 ml-0 mb-2 font-medium">{children}</h2>
-// )
+const Project = ({ project }) => (
+  <div className="flex flex-col space-y-3 mb-6 pt-6">
+    <div className="flex flex-col">
+      {/*
+      <p className="mt-b text-xs text-gray-600">
+        {project.startDate} - {project.endDate}
+      </p>
+*/}
 
-const Field = ({
-  field,
-  selected = false,
-  onSelect = () => {},
-  onHover = () => {},
-}) => (
-  <div
-    className={`px-5 py-3 rounded-full border text-2xl font-medium ${
-      selected ? 'bg-gray-200' : 'text-gray-900'
-    } border-gray-300 tracking-wide hover:cursor-pointer hover:border-gray-500`}
-    onClick={() => onSelect(field)}
-    onMouseOver={() => onHover(field)}
-  >
-    {field}
+      <p className="mb-0.5 text-xs text-gray-400 font-light">
+        {formatDate(project.startDate)} - {formatDate(project.endDate)}
+      </p>
+      <h2 className="text-xl text-gray-900 font-bold">{project.name}</h2>
+    </div>
+    <p className="text-sm mt-2 text-gray-600 text-lg">{project.description}</p>
+    {project.bullets?.length > 0 && (
+      <ul className="list-disc list-outside mt-2 space-y-2 pl-5 text-md">
+        {project.bullets.map((bullet, index) => (
+          <li key={index} className="text-sm pl-1">
+            {bullet}
+          </li>
+        ))}
+      </ul>
+    )}
+    <div className="flex _ml-6">
+      {project.fields.map((field) => (
+        <>
+          {/*
+        <Tag>{field}</Tag>
+        */}
+
+          <span className="bg-gray-200 text-gray-700 px-2 py-1 rounded mr-2">
+            {field}
+          </span>
+        </>
+      ))}
+    </div>
+    <div className="flex items-center gap-x-1.5 text-xs _ml-6 flex-wrap">
+      {project.technologies.map((tag, index) => (
+        <React.Fragment key={tag}>
+          <span className="text-gray-800 py-1 hover:text-blue-600 hover:cursor-pointer">
+            {tag}
+          </span>
+          {index < project.technologies.length - 1 && (
+            <span className="text-gray-800">•</span>
+          )}
+        </React.Fragment>
+      ))}
+    </div>
+    {/*
+    <div className="flex">
+      {project.technologies.map((tag) => (
+        <span
+          key={tag}
+          className="bg-blue-200 text-blue-700 px-2 py-1 rounded mr-2"
+        >
+          {tag}
+        </span>
+      ))}
+    </div>
+    */}
   </div>
 )
 
 const Tag = ({
+  children,
   tag,
   selected = false,
   onSelect = () => {},
@@ -135,8 +116,8 @@ const Tag = ({
     onClick={() => onSelect(tag)}
     onMouseOver={() => onHover(tag)}
   >
-    {tag}
+    {children}
   </div>
 )
 
-export default HomePage
+export default List
