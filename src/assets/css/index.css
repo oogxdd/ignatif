@@ -5,3 +5,14 @@
 html {
   background-color: rgb(249, 250, 251);
 }
+
+a {
+  /* color: #a9a90d; */
+  /* color: #c86d25; */
+  color: #489dcdfc;
+  /* color: blue; */
+}
+
+a:hover {
+  text-decoration: underline;
+}

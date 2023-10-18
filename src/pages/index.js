@@ -5,23 +5,43 @@ import { formatDate } from '@/utils'
 const List = () => {
   return (
     <div className="flex flex-col _space-y-8 divide-y p-6 px-8 max-w-4xl">
-      <div className="w-full justify-between">
-        <span>Maxim Ignatev</span>
-
-        <span>oogxdd@gmail.com</span>
-      </div>
-      <div>
+      <div className="flex flex-col  border-red-300 border-b">
+        <div className="flex items-center w-full justify-between mb-2">
+          <span className="font-semibold text-xl">Maxim Ignatev</span>
+          <a href="mailto:oogxdd@gmail.com" className="text-sm">
+            oogxdd@gmail.com
+          </a>
+        </div>
+        <div className="text-sm">
+          {/*
         A solution-oriented developer and UI/UX designer with a penchant for
-        turning ideas into reality. <br />
-        <br />
+        turning ideas into reality.
+        A developer at the intersection of innovation and design.
+      */}
+          A self-driven developer with a distinctive design background.
+          {/*
+           */}
+          <br />
+          <br />
+          My skills transform ideas into functional products, with a balance of
+          technical precision and aesthetic appeal.
+          {/*
         My unique design background complements my technical expertise,
         fostering quick delivery with a keen eye for aesthetics.
-        <br />
-        <br />I value team dynamics, always ready to collaborate and compromise
+         */}
+          <br />
+          <br />I prioritize clear communication, ensuring alignment and
+          teamwork to achieve collective goals."
+          {/*
+    I value team dynamics, always ready to collaborate and compromise
         to bring visions to life, and my communication skills bridge the gap
         between technical and non-technical stakeholders.
+         */}
+        </div>
       </div>
-      <span>My experience:</span>
+      {/*
+       */}
+      <span className="mt-12 font-semibold text-lg">My experience:</span>
       {projects
         .filter((i) => !!i.list)
         .reverse()
@@ -31,8 +51,13 @@ const List = () => {
             key={`${project.startDate}-${project.name}`}
           />
         ))}
-      <div className="w-full h-screen flex items-center justify-center">
-        <a href="mailto:oogxdd@gmail.com">oogxdd@gmail.com</a>
+      <div className="w-full h-screen flex-col md:h-auto pt-0 md:pt-4 pb-0 md:pb-8 md:items-start flex items-center justify-center">
+        <a
+          href="mailto:oogxdd@gmail.com"
+          className="text-xl md:text-base font-light"
+        >
+          oogxdd@gmail.com
+        </a>
       </div>
     </div>
   )
