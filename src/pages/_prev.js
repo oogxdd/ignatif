@@ -111,31 +111,10 @@ export default () => {
     */}
       </div>
       <div className="flex flex-col self-end px-12 mb-32 mt-64">
-        <div>Maxim ignatev</div>
+        <div>Maxim Ignatev</div>
         <div>Current location: Yerevan, Armenia</div>
         <div>Date of birth: 09.02.1997</div>
         <div>Occupation: up for cooperation</div>
-        <br />
-        <div>
-          Goal: new world ideology with universal basic food,
-          <br />
-          housing and medicine.
-          <br />
-          <br />
-          Progressive taxes
-          <br />
-          <br />
-          Ненасильственные изменения
-          <br />
-          <br />
-          <br />
-          Other interests:
-          <br />
-          <br />
-          <a className="text-purple-500 hover:underline cursor-pointer">
-            music
-          </a>
-        </div>
       </div>
       <a
         href="mailto:ignatif@gmail.com"
@@ -146,7 +125,3 @@ export default () => {
     </>
   )
 }
-
-// date of birth:
-// current location:
-// other interests (music)
