@@ -1,18 +1,19 @@
 import React from 'react'
 import { projects } from '@/data/projects'
+import { fieldColors, fieldTextColors } from '@/data/fields'
 import { formatDate } from '@/utils'
 import { CheckIcon } from '@heroicons/react/24/outline'
 
 const List = () => {
   return (
-    <div className="flex flex-col _space-y-8 divide-y p-6 px-8 max-w-3xl">
+    <div className="flex flex-col _space-y-8p-6 px-8">
       <a
         href="mailto:oogxdd@gmail.com"
         className="text-sm absolute top-3.5 right-4"
       >
         oogxdd@gmail.com
       </a>
-      <div className="text-md mt-12 sm:mt-8 mb-3.5">
+      <div className="text-lg mt-12 sm:mt-8 mb-3.5">
         Hi, I'm <b className="font-medium">Maxim Ignatev</b>, a full-stack
         developer with AI expertise and a design background.
         <br />
@@ -42,23 +43,27 @@ const List = () => {
     I prioritize clear communication, ensuring alignment and teamwork to achieve collective goals.
         </div>
       </div>
-      <span className="mt-12 font-semibold text-lg">My experience:</span>
+      <span className="mt-12 text-xs tracking-wider font-bold text-gray-400 uppercase">
+        My experience:
+      </span>
       */}
-      {projects
-        .filter((i) => !!i.list)
-        .reverse()
-        .map((project) => (
-          <Project
-            project={project}
-            key={`${project.startDate}-${project.name}`}
-          />
-        ))}
-      <div className="w-full h-screen flex-col md:h-auto pt-0 md:pt-4 pb-0 md:pb-8 md:items-start flex items-center justify-center">
-        <div className="text-xl md:text-base">
-          <span className="inline-block">For inquires, please reach at:</span>
-          <a href="mailto:oogxdd@gmail.com" className="font-light">
-            {` oogxdd@gmail.com`}
-          </a>
+      <div className=" divide-y max-w-3xl">
+        {projects
+          .filter((i) => !!i.list)
+          .reverse()
+          .map((project) => (
+            <Project
+              project={project}
+              key={`${project.startDate}-${project.name}`}
+            />
+          ))}
+        <div className="w-full h-screen flex-col md:h-auto pt-0 md:pt-4 pb-0 md:pb-8 md:items-start flex items-center justify-center">
+          <div className="text-xl md:text-base">
+            <span className="inline-block">For inquires, please reach at:</span>
+            <a href="mailto:oogxdd@gmail.com" className="font-light">
+              {` oogxdd@gmail.com`}
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -79,9 +84,9 @@ const Project = ({ project }) => (
       </p>
       <h2 className="text-xl text-gray-900 font-bold flex items-center">
         {project.name}
-        {project.good && (
+        {/* project.good && (
           <CheckIcon className="ml-1 w-4 h-4 text-green-600 mt-[1.5px] inline" />
-        )}
+        ) */}
       </h2>
     </div>
     <p className="text-sm mt-2 text-gray-600 text-lg">{project.description}</p>
@@ -103,15 +108,7 @@ const Project = ({ project }) => (
     )}
     <div className="flex _ml-6">
       {project.fields.map((field) => (
-        <>
-          {/*
-        <Tag>{field}</Tag>
-        */}
-
-          <span className="bg-gray-200 text-gray-700 px-2 py-1 rounded mr-2">
-            {field}
-          </span>
-        </>
+        <Tag key={`${project.name}-${field}`}>{field}</Tag>
       ))}
     </div>
     <div className="flex items-center gap-x-1.5 text-xs _ml-6 flex-wrap">
@@ -141,22 +138,35 @@ const Project = ({ project }) => (
   </div>
 )
 
-const Tag = ({
-  children,
-  tag,
-  selected = false,
-  onSelect = () => {},
-  onHover = () => {},
-}) => (
-  <div
-    className={`px-3 py-1.5 rounded-full border text-lg font-medium ${
-      selected ? 'bg-gray-200' : 'text-gray-900'
-    } border-gray-300 tracking-wide hover:cursor-pointer hover:border-gray-500`}
-    onClick={() => onSelect(tag)}
-    onMouseOver={() => onHover(tag)}
-  >
-    {children}
-  </div>
-)
+// <span className="">
+//   {field}
+// </span>
+
+const Tag = ({ children, selected = false }) => {
+  const color = fieldColors[children]
+  const textColor = fieldTextColors[children]
+
+  return (
+    <div
+      className={`px-2.5 py-1 rounded-full border mr-1.5 text-sm _font-medium tracking-wide border-[1.5px] border-[${color}] color-[${textColor}] flex items-center justify-center text-gray-600`}
+      style={{
+        borderColor: color,
+        color: textColor,
+        // background: textColor,
+        // color: 'white',
+      }}
+    >
+      {/*
+      <div
+        className="w-1.5 h-1.5 mr-1 rounded-full"
+        style={{
+          background: textColor,
+        }}
+      />
+      */}
+      {children}
+    </div>
+  )
+}
 
 export default List
