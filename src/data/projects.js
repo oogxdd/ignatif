@@ -251,8 +251,8 @@ export const projects = [
     list: true,
     good: true,
     name: 'Hostaway',
-    startDate: '2021-06-01',
-    endDate: '2021-06-21',
+    startDate: '2021-05-01',
+    // endDate: '2021-05-30',
     fields: ['UI/UX'],
     technologies: ['Figma', 'TailwindUI'],
     // technologies: ['Tailwind UI'],
@@ -385,7 +385,7 @@ export const projects = [
     // description:
     //   "Generative parametric design tool to produce UI kits and components systems tailored to customer's brand styles.",
     description:
-      "Generative UI tool designed to produce UI kits and components systems tailored to customer's brand styles.",
+      "Generative UI tool designed to produce UI kits and component systems tailored to customer's brand styles.",
     // description:
     //   'Generative UI tool designed around the concept that most software shares a common UX, with variations primarily in UI parameters.',
     bullets: [

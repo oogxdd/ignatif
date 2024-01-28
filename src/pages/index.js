@@ -7,6 +7,11 @@ import { CheckIcon } from '@heroicons/react/24/outline'
 const List = () => {
   return (
     <div className="flex flex-col _space-y-8p-6 px-8">
+      {/*
+      <button className="bg-tomatoA-4 hover:bg-tomato-5 text-tomatoA-11">
+        Button
+      </button>
+      */}
       <a
         href="mailto:oogxdd@gmail.com"
         className="text-sm absolute top-3.5 right-4"
@@ -15,7 +20,7 @@ const List = () => {
       </a>
       <div className="text-lg mt-12 sm:mt-8 mb-3.5">
         Hi, I'm <b className="font-medium">Maxim Ignatev</b>, a full-stack
-        developer with AI expertise and a design background.
+        developer with AI expertise and design background.
         <br />
         {/*
         <br />I can spearhead projects independently or integrate seamlessly
@@ -71,7 +76,7 @@ const List = () => {
 }
 
 const Project = ({ project }) => (
-  <div className="flex flex-col space-y-3 mb-6 pt-6">
+  <div className="flex flex-col space-y-3 mb-6 pt-6 avoid-break">
     <div className="flex flex-col">
       {/*
       <p className="mt-b text-xs text-gray-600">
@@ -80,7 +85,8 @@ const Project = ({ project }) => (
 */}
 
       <p className="mb-0.5 text-xs text-gray-400 font-light">
-        {formatDate(project.startDate)} - {formatDate(project.endDate)}
+        {formatDate(project.startDate)}
+        {project.endDate ? ` - ${formatDate(project.endDate)}` : ''}
       </p>
       <h2 className="text-xl text-gray-900 font-bold flex items-center">
         {project.name}
