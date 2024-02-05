@@ -63,12 +63,43 @@ const List = () => {
             />
           ))}
         <div className="w-full h-screen flex-col md:h-auto pt-0 md:pt-4 pb-0 md:pb-8 md:items-start flex items-center justify-center">
+          <div className="flex divide-x gap-x-4">
+            <a href="mailto:oogxdd@gmail.com" className="_pl-4" target="_blank">
+              Email
+            </a>
+
+            <a
+              href="https://github.com/oogxdd"
+              className="pl-4"
+              target="_blank"
+            >
+              GitHub
+            </a>
+
+            <a
+              href="https://www.upwork.com/freelancers/~010f734ee3702089ab"
+              className="pl-4"
+              target="_blank"
+            >
+              Upwork
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/maxim-ignatev/"
+              className="pl-4"
+              target="_blank"
+            >
+              LinkedIn
+            </a>
+          </div>
+          {/*
           <div className="text-xl md:text-base">
             <span className="inline-block">For inquires, please reach at:</span>
             <a href="mailto:oogxdd@gmail.com" className="font-light">
               {` oogxdd@gmail.com`}
             </a>
           </div>
+          */}
         </div>
       </div>
     </div>
@@ -84,12 +115,18 @@ const Project = ({ project }) => (
       </p>
 */}
 
-      <p className="mb-0.5 text-xs text-gray-400 font-light">
+      <p className="mb-1 text-xs text-gray-400 font-light">
         {formatDate(project.startDate)}
         {project.endDate ? ` - ${formatDate(project.endDate)}` : ''}
       </p>
-      <h2 className="text-xl text-gray-900 font-bold flex items-center">
-        {project.name}
+      <h2
+        className="text-xl text-gray-900 font-bold flex items-center"
+        style={{
+          fontSize: 21,
+        }}
+      >
+        <span className="font-medium text-gray-800">{`${project.title} at `}</span>
+        <span className="ml-1.5">{project.name}</span>
         {/* project.good && (
           <CheckIcon className="ml-1 w-4 h-4 text-green-600 mt-[1.5px] inline" />
         ) */}
@@ -112,11 +149,13 @@ const Project = ({ project }) => (
         ))}
       </ul>
     )}
+    {/* 
     <div className="flex _ml-6">
       {project.fields.map((field) => (
         <Tag key={`${project.name}-${field}`}>{field}</Tag>
       ))}
     </div>
+    */}
     <div className="flex items-center gap-x-1.5 text-xs _ml-6 flex-wrap">
       {project.technologies.map((tag, index) => (
         <React.Fragment key={tag}>

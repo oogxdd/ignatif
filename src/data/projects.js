@@ -3,10 +3,11 @@ export const projects = [
     list: true,
     good: true,
     name: 'DBGlass',
+    title: 'Junior Developer',
     startDate: '2016-04-01',
     endDate: '2016-06-01',
     fields: ['Frontend', 'Backend'],
-    technologies: ['React', 'Electron', 'PostgreSQL'],
+    technologies: ['React', 'Redux', 'Electron', 'PostgreSQL'],
     description: 'Desktop GUI client for Postgres database management.',
     links: [
       'https://github.com/web-pal/DBGlass',
@@ -23,6 +24,7 @@ export const projects = [
     list: true,
     good: true,
     name: 'Hypefactors',
+    title: 'Junior Mobile Developer',
     startDate: '2016-07-01',
     endDate: '2016-08-30',
     fields: ['Frontend'],
@@ -41,6 +43,7 @@ export const projects = [
     list: true,
     good: true,
     name: 'Zenkraft Deliverable',
+    title: 'Junior Front-end Developer',
     startDate: '2016-09-01',
     endDate: '2016-11-01',
     fields: ['Frontend'],
@@ -58,6 +61,7 @@ export const projects = [
     good: true,
     name: 'Hostaway',
     startDate: '2016-10-02',
+    title: 'Middle Front-end Developer',
     endDate: '2017-03-01',
     fields: ['Frontend'],
     technologies: ['React', 'Redux', 'React Native'],
@@ -71,31 +75,8 @@ export const projects = [
   {
     list: true,
     good: true,
-    name: 'Web-pal',
-    startDate: '2016-04-01',
-    endDate: '2018-06-01',
-    fields: ['Frontend', 'Backend', 'UI/UX'],
-    technologies: [
-      'React',
-      'React Native',
-      'Redux',
-      'Electron',
-      'PostgreSQL',
-      'styled-components',
-    ],
-    description:
-      'Served in a multi-faceted role at an agency, focusing on both internal tool development and client-focused outsourced projects.',
-    links: ['http://web-pal.com/'],
-    bullets: [
-      'Progressed from a junior developer role, eventually leading and mentoring my first junior developer.',
-      'Engaged in a mix of outsourced client projects and development of internal agency tools.',
-      'Worked collaboratively with a team, contributing to various projects and ensuring client satisfaction.',
-    ],
-  },
-  {
-    list: true,
-    good: true,
     name: 'Chronos',
+    title: 'UI/UX Designer / Front-end Developer',
     startDate: '2017-09-01',
     endDate: '2017-12-30',
     fields: ['UI/UX', 'Frontend'],
@@ -118,6 +99,31 @@ export const projects = [
       'Worked in tandem with the team at Web-pal to bring the product to launch.',
     ],
   },
+  {
+    list: true,
+    good: true,
+    name: 'Web-pal',
+    title: 'Junior/Middle Developer',
+    startDate: '2016-04-01',
+    endDate: '2018-06-01',
+    fields: ['Frontend', 'Backend', 'UI/UX'],
+    technologies: [
+      'React',
+      'React Native',
+      'Redux',
+      'Electron',
+      'PostgreSQL',
+      'styled-components',
+    ],
+    description:
+      'Served in a multi-faceted role at an agency, focusing on both internal tool development and client-focused outsourced projects.',
+    links: ['http://web-pal.com/'],
+    bullets: [
+      'Progressed from a junior developer role, eventually leading and mentoring my first junior developer.',
+      'Engaged in a mix of outsourced client projects and development of internal agency tools.',
+      'Worked collaboratively with a team, contributing to various projects and ensuring client satisfaction.',
+    ],
+  },
   //{
   //  name: 'DeliverMD',
   //  startDate: '2017-07-01',
@@ -133,6 +139,7 @@ export const projects = [
     list: true,
     good: true,
     name: 'Hostaway',
+    title: 'UI/UX Designer',
     startDate: '2018-01-01',
     endDate: '2018-06-01',
     fields: ['UI/UX'],
@@ -149,6 +156,7 @@ export const projects = [
     list: true,
     good: true,
     notVeryGood: true,
+    title: 'Full-stack developer / Founding engineer',
     name: 'Voicestory',
     startDate: '2018-10-01',
     endDate: '2019-06-30',
@@ -167,23 +175,8 @@ export const projects = [
   {
     list: true,
     good: true,
-    name: 'MyFit',
-    startDate: '2020-03-28',
-    endDate: '2020-04-28',
-    fields: ['Frontend'],
-    technologies: ['React', 'Bravo Studio', 'DatoCMS', 'PWA'],
-    description:
-      'Fitness application showcasing resistance bands training tutorials.',
-    bullets: [
-      'Developed and released a mobile applications (iOS and Android) using the no-code platform "Bravo Studio" with the collection of resistace bands training videos.',
-      "Integrated DatoCMS as the content management system for managing application's content.",
-      'Additionally developed a Progressive Web Application (PWA) to provide users with the seamless web access and additional features.',
-    ],
-  },
-  {
-    list: true,
-    good: true,
     name: 'antcmd',
+    title: 'Front-end developer',
     startDate: '2020-05-01',
     endDate: '2020-06-14',
     fields: [
@@ -213,6 +206,24 @@ export const projects = [
     // 'https://github.com/type-j/editor/tree/electron'
     // ]
   },
+
+  {
+    list: true,
+    good: true,
+    name: 'MyFit',
+    startDate: '2020-03-28',
+    endDate: '2020-04-28',
+    fields: ['Frontend'],
+    title: 'Full-stack / Mobile developer',
+    technologies: ['React', 'Bravo Studio', 'DatoCMS', 'PWA'],
+    description:
+      'Fitness application showcasing resistance bands training tutorials.',
+    bullets: [
+      'Developed and released a mobile applications (iOS and Android) using the no-code platform "Bravo Studio" with the collection of resistace bands training videos.',
+      "Integrated DatoCMS as the content management system for managing application's content.",
+      'Additionally developed a Progressive Web Application (PWA) to provide users with the seamless web access and additional features.',
+    ],
+  },
   {
     list: true,
     good: true,
@@ -220,6 +231,7 @@ export const projects = [
     startDate: '2020-06-15',
     endDate: '2020-12-17',
     fields: ['Frontend', 'Backend', 'Founder/Co-founder'],
+    title: 'Full-stack developer / Founding engineer',
     technologies: ['React', 'Next.js', 'Node', 'Prisma'],
     description:
       'A community platform that allows writers to progressively publish their works and gain immediate feedback.',
@@ -238,8 +250,9 @@ export const projects = [
     name: 'Movenation',
     startDate: '2021-02-01',
     endDate: '2021-04-21',
+    title: 'Front-end developer / Founding engineer',
     fields: ['Frontend', 'UI/UX', 'Founder/Co-founder'],
-    technologies: ['Next.js', 'TailwindCSS', 'TailwindUI'],
+    technologies: ['React', 'Next.js', 'TailwindCSS', 'TailwindUI'],
     description:
       'Co-founded an initiative to aid individuals relocating to new countries by linking them with expert communities for personalized advice.',
     bullets: [
@@ -247,88 +260,89 @@ export const projects = [
       'Decided not to proceed further as the landing page did not meet our targeted conversion rate expectations.',
     ],
   },
-  {
-    list: true,
-    good: true,
-    name: 'Hostaway',
-    startDate: '2021-05-01',
-    // endDate: '2021-05-30',
-    fields: ['UI/UX'],
-    technologies: ['Figma', 'TailwindUI'],
-    // technologies: ['Tailwind UI'],
-    description:
-      'Conceptualized a redesign for the landing page through in-depth product analysis and strategic information hierarchy structuring.',
-    bullets: [
-      //
-    ],
-  },
-  {
-    list: true,
-    good: true,
-    name: 'DAN.IT',
-    startDate: '2021-06-01',
-    endDate: '2021-08-01',
-    fields: ['Education'],
-    technologies: ['HTML', 'CSS', 'JavaScript'],
-    description:
-      'Served as a programming instructor for an English-speaking cohort, teaching core concepts of HTML, CSS, and JavaScript.',
-    bullets: [
-      //
-    ],
-  },
-  {
-    list: true,
-    good: true,
-    name: 'type-j',
-    startDate: '2021-08-01',
-    endDate: '2021-09-01',
-    fields: ['Frontend', 'AI', 'UX', 'Founder/Co-founder'],
-    technologies: ['Chrome Extension', 'GPT-J'],
-    // description: 'Chrome plugin experiment to generate text.',
-    // description:
-    //   "A Chrome extension powered by GPT-J, designed to aid writers in overcoming writer's block by introducing an innovative, iterative text generation process.",
-    // description:
-    //   "A Chrome extension powered by GPT-J, designed to aid writers in overcoming writer's block by offering real-time, contextually relevant text suggestions.",
-    description:
-      "A Chrome extension powered by GPT-J, designed to aid writers in overcoming writer's block by offering real-time, contextually relevant text suggestions.",
-    bullets: [
-      // 'Invented an iterative text generation approach, allowing users to start with a single word and progressively expand to phrase, sentence, paragraph, section, or full-scale article.',
-      'Invented an iterative text generation approach, allowing users to start with a single word and sequentially build upon it - to phrase, sentence, paragraph, section, and ultimately full-scale article.',
-      'At each step, users are offered several context-aware choices that build cohesively upon their previous selections.',
-      // "Invented an iterative text generation approach, where users begin with a single word and sequentially build upon it—from phrases to sentences, paragraphs, sections, and ultimately full articles. At each stage, multiple contextually relevant options are presented, seamlessly integrating the user's prior selections.",
-      'Halted development due to uncertainty in pinpointing a target market, coupled with concerns about commercial viability.',
-    ],
-  },
-  {
-    list: true,
-    good: true,
-    name: 'tldr.app',
-    startDate: '2021-09-02',
-    endDate: '2021-10-01',
-    fields: ['Frontend', 'AI', 'UX', 'Founder/Co-founder'],
-    technologies: ['Chrome Extension', 'HuggingFace'],
-    // description: 'Chrome plugin to summarize any piece of text on the web.',
-    description:
-      'A Chrome extension powered by the DistilBERT model, designed to quickly generate concise text summaries for any text content on the web.',
-    // description:
-    //   'A user-friendly Chrome extension leveraging the DistilBERT model to generate concise text summaries for any web content.',
-    bullets: [
-      'Developed a unique interaction method for on-the-fly text summarization.',
-      // 'Implemented an intuitive interface for instant text summarization in browser.',
-      'Attracted potential investment interest but opted not to proceed due to uncertainties about market demand.',
+  //{
+  //  list: true,
+  //  good: true,
+  //  name: 'Hostaway',
+  //  startDate: '2021-05-01',
+  //  // endDate: '2021-05-30',
+  //  fields: ['UI/UX'],
+  //  technologies: ['Figma', 'TailwindUI'],
+  //  // technologies: ['Tailwind UI'],
+  //  description:
+  //    'Conceptualized a redesign for the landing page through in-depth product analysis and strategic information hierarchy structuring.',
+  //  bullets: [
+  //    //
+  //  ],
+  //},
+  //{
+  //  list: true,
+  //  good: true,
+  //  name: 'DAN.IT',
+  //  startDate: '2021-06-01',
+  //  endDate: '2021-08-01',
+  //  fields: ['Education'],
+  //  technologies: ['HTML', 'CSS', 'JavaScript'],
+  //  description:
+  //    'Served as a programming instructor for an English-speaking cohort, teaching core concepts of HTML, CSS, and JavaScript.',
+  //  bullets: [
+  //    //
+  //  ],
+  //},
+  // {
+  //   list: true,
+  //   good: true,
+  //   name: 'type-j',
+  //   startDate: '2021-08-01',
+  //   endDate: '2021-09-01',
+  //   fields: ['Frontend', 'AI', 'UX', 'Founder/Co-founder'],
+  //   technologies: ['Chrome Extension', 'GPT-J'],
+  //   // description: 'Chrome plugin experiment to generate text.',
+  //   // description:
+  //   //   "A Chrome extension powered by GPT-J, designed to aid writers in overcoming writer's block by introducing an innovative, iterative text generation process.",
+  //   // description:
+  //   //   "A Chrome extension powered by GPT-J, designed to aid writers in overcoming writer's block by offering real-time, contextually relevant text suggestions.",
+  //   description:
+  //     "A Chrome extension powered by GPT-J, designed to aid writers in overcoming writer's block by offering real-time, contextually relevant text suggestions.",
+  //   bullets: [
+  //     // 'Invented an iterative text generation approach, allowing users to start with a single word and progressively expand to phrase, sentence, paragraph, section, or full-scale article.',
+  //     'Invented an iterative text generation approach, allowing users to start with a single word and sequentially build upon it - to phrase, sentence, paragraph, section, and ultimately full-scale article.',
+  //     'At each step, users are offered several context-aware choices that build cohesively upon their previous selections.',
+  //     // "Invented an iterative text generation approach, where users begin with a single word and sequentially build upon it—from phrases to sentences, paragraphs, sections, and ultimately full articles. At each stage, multiple contextually relevant options are presented, seamlessly integrating the user's prior selections.",
+  //     'Halted development due to uncertainty in pinpointing a target market, coupled with concerns about commercial viability.',
+  //   ],
+  // },
+  //{
+  //  list: true,
+  //  good: true,
+  //  name: 'tldr.app',
+  //  startDate: '2021-09-02',
+  //  endDate: '2021-10-01',
+  //  fields: ['Frontend', 'AI', 'UX', 'Founder/Co-founder'],
+  //  technologies: ['Chrome Extension', 'HuggingFace'],
+  //  // description: 'Chrome plugin to summarize any piece of text on the web.',
+  //  description:
+  //    'A Chrome extension powered by the DistilBERT model, designed to quickly generate concise text summaries for any text content on the web.',
+  //  // description:
+  //  //   'A user-friendly Chrome extension leveraging the DistilBERT model to generate concise text summaries for any web content.',
+  //  bullets: [
+  //    'Developed a unique interaction method for on-the-fly text summarization.',
+  //    // 'Implemented an intuitive interface for instant text summarization in browser.',
+  //    'Attracted potential investment interest but opted not to proceed due to uncertainties about market demand.',
 
-      // "Despite showing promise and piquing the interest of investors, I hesitated to advance the project due to reservations about its commercial viability and genuine user need."
-      //
-    ],
-  },
+  //    // "Despite showing promise and piquing the interest of investors, I hesitated to advance the project due to reservations about its commercial viability and genuine user need."
+  //    //
+  //  ],
+  //},
   {
     list: true,
     good: true,
     name: 'Vividaura',
     startDate: '2022-02-02',
     endDate: '2022-02-10',
+    title: 'Front-end developer',
     fields: ['Frontend'],
-    technologies: ['React', 'Konva'],
+    technologies: ['React', 'KonvaJS'],
     description:
       'Developed an infinite zoomable canvas interface for an NFT-based project, allowing users to showcase their digital assets collaboratively.',
     bullets: [
@@ -337,20 +351,21 @@ export const projects = [
       "Applied constraints to maintain the integrity of each user's land, preventing overlap or spillage into others' territories.",
     ],
   },
-  {
-    name: 'Soundfuck',
-    startDate: '2022-07-01',
-    endDate: '2022-11-01',
-    fields: ['Backend', 'AI'],
-    technologies: ['FFMPG', 'Lambda', 'Speech-to-text'],
-    bullets: [
-      //
-    ],
-  },
+  //{
+  //  name: 'Soundfuck',
+  //  startDate: '2022-07-01',
+  //  endDate: '2022-11-01',
+  //  fields: ['Backend', 'AI'],
+  //  technologies: ['FFMPG', 'Lambda', 'Speech-to-text'],
+  //  bullets: [
+  //    //
+  //  ],
+  //},
   {
     list: true,
     good: true,
     name: 'DM6Labs',
+    title: 'Solution Architect',
     startDate: '2022-03-28',
     endDate: '2022-05-04',
     fields: ['No-code'],
@@ -374,32 +389,33 @@ export const projects = [
       'Provided staff with comprehensive training and instructions on the new workflow, ensuring smooth adoption and implementation.',
     ],
   },
-  {
-    list: true,
-    good: true,
-    name: 'Styleguide.ist',
-    startDate: '2021-10-02',
-    endDate: '2022-02-01',
-    fields: ['Frontend', 'UI/UX', 'Founder/Co-founder'],
-    technologies: ['React', 'TailwindCSS', 'Atomic design'],
-    // description:
-    //   "Generative parametric design tool to produce UI kits and components systems tailored to customer's brand styles.",
-    description:
-      "Generative UI tool designed to produce UI kits and component systems tailored to customer's brand styles.",
-    // description:
-    //   'Generative UI tool designed around the concept that most software shares a common UX, with variations primarily in UI parameters.',
-    bullets: [
-      'Conceived and pioneered the project as a solo founder, driving both the conceptualization and technical implementation.',
-      "Built an initial proof-of-concept to validate the technical feasibility and demonstrate the tool's potential to both potential customers and investors.",
-      'Introduced a few foundational components such as buttons, inputs, and blog posts,  enabling users to preserve universal UX while customizing specific UI parameters.',
-      // 'Decided to transition to other opportunities, recognizing the challenges of balancing individual projects with personal and professional commitments.',
-      'Due to personal commitments, the necessity of securing a job for financial stability, and challenges in obtaining investments, I decided to shift my focus away from the continued development of this project.',
-    ],
-  },
+  // {
+  //   list: true,
+  //   good: true,
+  //   name: 'Styleguide.ist',
+  //   startDate: '2021-10-02',
+  //   endDate: '2022-02-01',
+  //   fields: ['Frontend', 'UI/UX', 'Founder/Co-founder'],
+  //   technologies: ['React', 'TailwindCSS', 'Atomic design'],
+  //   // description:
+  //   //   "Generative parametric design tool to produce UI kits and components systems tailored to customer's brand styles.",
+  //   description:
+  //     "Generative UI tool designed to produce UI kits and component systems tailored to customer's brand styles.",
+  //   // description:
+  //   //   'Generative UI tool designed around the concept that most software shares a common UX, with variations primarily in UI parameters.',
+  //   bullets: [
+  //     'Conceived and pioneered the project as a solo founder, driving both the conceptualization and technical implementation.',
+  //     "Built an initial proof-of-concept to validate the technical feasibility and demonstrate the tool's potential to both potential customers and investors.",
+  //     'Introduced a few foundational components such as buttons, inputs, and blog posts,  enabling users to preserve universal UX while customizing specific UI parameters.',
+  //     // 'Decided to transition to other opportunities, recognizing the challenges of balancing individual projects with personal and professional commitments.',
+  //     'Due to personal commitments, the necessity of securing a job for financial stability, and challenges in obtaining investments, I decided to shift my focus away from the continued development of this project.',
+  //   ],
+  // },
   {
     list: true,
     good: true,
     name: 'Trialproofer',
+    title: 'Front-end developer',
     startDate: '2022-07-01',
     endDate: '2022-09-01',
     fields: ['Frontend'],
@@ -444,6 +460,7 @@ export const projects = [
     name: 'Machcast',
     startDate: '2022-10-13',
     endDate: '2023-01-13',
+    title: 'Founding Engineer',
     fields: ['Frontend', 'Backend', 'AI', 'Founder/Co-founder'],
     description:
       'AI-driven platform designed to extract engaging moments from long videos for distribution on short-form content social media platforms (TikTok, Instagram Reels and Youtube Shorts).',
@@ -451,12 +468,16 @@ export const projects = [
       'React',
       'Node',
       'Prisma',
+      'Next.js',
       'Hasura',
       'AssemblyAI',
       'OpenAI',
       'Youtube API',
-      'yt-dlp',
       'ffmpg',
+      'Vercel',
+      'AWS EC2',
+      'S3',
+      'RDS',
     ],
     bullets: [
       'Took on the challenge of developing an innovative solution to extract compelling clips from longer videos, despite initial uncertainties.',
@@ -488,6 +509,7 @@ export const projects = [
     name: 'Mori',
     startDate: '2023-04-01',
     endDate: '2023-09-01',
+    title: 'R&D Engineer',
     description:
       'A next-generation genealogy software designed to foster family connections.',
     fields: ['Frontend', 'Backend', 'AI'],
@@ -500,19 +522,19 @@ export const projects = [
       'Claude',
       'Replicate',
       'Azure',
-      'Supabase',
-      'Speechmatics',
-      'Serper',
-      'face-api.js',
       'Remotion',
+      'Supabase',
       'AWS Lambda',
+      'Speechmatics',
+      'Photo enhancement',
       'Speech-to-text',
       // 'Text-to-speech',
       'OCR',
-      'Photo enhancement',
+      'Face recognition',
+      // 'Serper',
       'Chakra UI',
       'TypeScript',
-      'Gedcom',
+      'GEDCOM',
     ],
     bullets: [
       // 'Spearheaded the complete development of the media gallery, integrating cutting-edge features such as photo enhancement, audio transcription, OCR, and text translation.',
