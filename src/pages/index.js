@@ -6,19 +6,22 @@ import { CheckIcon } from '@heroicons/react/24/outline'
 
 const List = () => {
   return (
-    <div className="flex flex-col _space-y-8p-6 px-8">
+    <div
+      className="flex flex-col _space-y-8p-6 px-12 py-12 origin-top-left"
+      style={{ transform: 'scale(0.95)' }}
+    >
       {/*
       <button className="bg-tomatoA-4 hover:bg-tomato-5 text-tomatoA-11">
         Button
       </button>
-      */}
       <a
         href="mailto:oogxdd@gmail.com"
         className="text-sm absolute top-3.5 right-4"
       >
         oogxdd@gmail.com
       </a>
-      <div className="text-lg mt-12 sm:mt-8 mb-3.5">
+      */}
+      <div className="text-lg mt-12 sm:mt-8 mb-4">
         Hi, I'm <b className="font-medium">Maxim Ignatev</b>, a full-stack
         developer with AI expertise and design background.
         <br />
@@ -62,10 +65,10 @@ const List = () => {
               key={`${project.startDate}-${project.name}`}
             />
           ))}
-        <div className="w-full h-screen flex-col md:h-auto pt-0 md:pt-4 pb-0 md:pb-8 md:items-start flex items-center justify-center">
-          <div className="flex divide-x gap-x-4">
+        <div className="w-full h-screen flex-col md:h-auto pt-0 md:pt-6 pb-0 md:pb-2 md:items-start flex items-center justify-center">
+          <div className="flex divide-x gap-x-5 text-base text-sky-600">
             <a href="mailto:oogxdd@gmail.com" className="_pl-4" target="_blank">
-              Email
+              ignatif@gmail.com
             </a>
 
             <a
@@ -76,6 +79,7 @@ const List = () => {
               GitHub
             </a>
 
+            {/*
             <a
               href="https://www.upwork.com/freelancers/~010f734ee3702089ab"
               className="pl-4"
@@ -83,6 +87,7 @@ const List = () => {
             >
               Upwork
             </a>
+           */}
 
             <a
               href="https://www.linkedin.com/in/maxim-ignatev/"
@@ -95,11 +100,11 @@ const List = () => {
           {/*
           <div className="text-xl md:text-base">
             <span className="inline-block">For inquires, please reach at:</span>
-            <a href="mailto:oogxdd@gmail.com" className="font-light">
-              {` oogxdd@gmail.com`}
+            <a href="mailto:ignatif@gmail.com" className="font-light">
+              {` ignatif@gmail.com`}
             </a>
           </div>
-          */}
+           */}
         </div>
       </div>
     </div>

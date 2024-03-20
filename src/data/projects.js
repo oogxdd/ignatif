@@ -124,17 +124,6 @@ export const projects = [
       'Worked collaboratively with a team, contributing to various projects and ensuring client satisfaction.',
     ],
   },
-  //{
-  //  name: 'DeliverMD',
-  //  startDate: '2017-07-01',
-  //  endDate: '2017-08-30',
-  //  fields: ['UI/UX'],
-  //  technologies: [],
-  //  description: 'Mobile app design proposal.',
-  //  bullets: [
-  //    //
-  //  ],
-  //},
   {
     list: true,
     good: true,
@@ -156,7 +145,7 @@ export const projects = [
     list: true,
     good: true,
     notVeryGood: true,
-    title: 'Full-stack developer / Founding engineer',
+    title: 'Full-stack developer',
     name: 'Voicestory',
     startDate: '2018-10-01',
     endDate: '2019-06-30',
@@ -275,65 +264,65 @@ export const projects = [
   //    //
   //  ],
   //},
-  //{
-  //  list: true,
-  //  good: true,
-  //  name: 'DAN.IT',
-  //  startDate: '2021-06-01',
-  //  endDate: '2021-08-01',
-  //  fields: ['Education'],
-  //  technologies: ['HTML', 'CSS', 'JavaScript'],
-  //  description:
-  //    'Served as a programming instructor for an English-speaking cohort, teaching core concepts of HTML, CSS, and JavaScript.',
-  //  bullets: [
-  //    //
-  //  ],
-  //},
-  // {
-  //   list: true,
-  //   good: true,
-  //   name: 'type-j',
-  //   startDate: '2021-08-01',
-  //   endDate: '2021-09-01',
-  //   fields: ['Frontend', 'AI', 'UX', 'Founder/Co-founder'],
-  //   technologies: ['Chrome Extension', 'GPT-J'],
-  //   // description: 'Chrome plugin experiment to generate text.',
-  //   // description:
-  //   //   "A Chrome extension powered by GPT-J, designed to aid writers in overcoming writer's block by introducing an innovative, iterative text generation process.",
-  //   // description:
-  //   //   "A Chrome extension powered by GPT-J, designed to aid writers in overcoming writer's block by offering real-time, contextually relevant text suggestions.",
-  //   description:
-  //     "A Chrome extension powered by GPT-J, designed to aid writers in overcoming writer's block by offering real-time, contextually relevant text suggestions.",
-  //   bullets: [
-  //     // 'Invented an iterative text generation approach, allowing users to start with a single word and progressively expand to phrase, sentence, paragraph, section, or full-scale article.',
-  //     'Invented an iterative text generation approach, allowing users to start with a single word and sequentially build upon it - to phrase, sentence, paragraph, section, and ultimately full-scale article.',
-  //     'At each step, users are offered several context-aware choices that build cohesively upon their previous selections.',
-  //     // "Invented an iterative text generation approach, where users begin with a single word and sequentially build upon it—from phrases to sentences, paragraphs, sections, and ultimately full articles. At each stage, multiple contextually relevant options are presented, seamlessly integrating the user's prior selections.",
-  //     'Halted development due to uncertainty in pinpointing a target market, coupled with concerns about commercial viability.',
-  //   ],
-  // },
-  //{
-  //  list: true,
-  //  good: true,
-  //  name: 'tldr.app',
-  //  startDate: '2021-09-02',
-  //  endDate: '2021-10-01',
-  //  fields: ['Frontend', 'AI', 'UX', 'Founder/Co-founder'],
-  //  technologies: ['Chrome Extension', 'HuggingFace'],
-  //  // description: 'Chrome plugin to summarize any piece of text on the web.',
-  //  description:
-  //    'A Chrome extension powered by the DistilBERT model, designed to quickly generate concise text summaries for any text content on the web.',
-  //  // description:
-  //  //   'A user-friendly Chrome extension leveraging the DistilBERT model to generate concise text summaries for any web content.',
-  //  bullets: [
-  //    'Developed a unique interaction method for on-the-fly text summarization.',
-  //    // 'Implemented an intuitive interface for instant text summarization in browser.',
-  //    'Attracted potential investment interest but opted not to proceed due to uncertainties about market demand.',
+  {
+    list: true,
+    good: true,
+    name: 'DAN.IT',
+    startDate: '2021-06-01',
+    endDate: '2021-08-01',
+    fields: ['Education'],
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    description:
+      'Served as a programming instructor for an English-speaking cohort, teaching core concepts of HTML, CSS, and JavaScript.',
+    bullets: [
+      //
+    ],
+  },
+  {
+    list: true,
+    good: true,
+    name: 'type-j',
+    startDate: '2021-08-01',
+    endDate: '2021-09-01',
+    fields: ['Frontend', 'AI', 'UX', 'Founder/Co-founder'],
+    technologies: ['Chrome Extension', 'GPT-J'],
+    // description: 'Chrome plugin experiment to generate text.',
+    // description:
+    //   "A Chrome extension powered by GPT-J, designed to aid writers in overcoming writer's block by introducing an innovative, iterative text generation process.",
+    // description:
+    //   "A Chrome extension powered by GPT-J, designed to aid writers in overcoming writer's block by offering real-time, contextually relevant text suggestions.",
+    description:
+      "A Chrome extension powered by GPT-J, designed to aid writers in overcoming writer's block by offering real-time, contextually relevant text suggestions.",
+    bullets: [
+      // 'Invented an iterative text generation approach, allowing users to start with a single word and progressively expand to phrase, sentence, paragraph, section, or full-scale article.',
+      'Invented an iterative text generation approach, allowing users to start with a single word and sequentially build upon it - to phrase, sentence, paragraph, section, and ultimately full-scale article.',
+      'At each step, users are offered several context-aware choices that build cohesively upon their previous selections.',
+      // "Invented an iterative text generation approach, where users begin with a single word and sequentially build upon it—from phrases to sentences, paragraphs, sections, and ultimately full articles. At each stage, multiple contextually relevant options are presented, seamlessly integrating the user's prior selections.",
+      'Halted development due to uncertainty in pinpointing a target market, coupled with concerns about commercial viability.',
+    ],
+  },
+  {
+    list: true,
+    good: true,
+    name: 'tldr.app',
+    startDate: '2021-09-02',
+    endDate: '2021-10-01',
+    fields: ['Frontend', 'AI', 'UX', 'Founder/Co-founder'],
+    technologies: ['Chrome Extension', 'HuggingFace'],
+    // description: 'Chrome plugin to summarize any piece of text on the web.',
+    description:
+      'A Chrome extension powered by the DistilBERT model, designed to quickly generate concise text summaries for any text content on the web.',
+    // description:
+    //   'A user-friendly Chrome extension leveraging the DistilBERT model to generate concise text summaries for any web content.',
+    bullets: [
+      'Developed a unique interaction method for on-the-fly text summarization.',
+      // 'Implemented an intuitive interface for instant text summarization in browser.',
+      'Attracted potential investment interest but opted not to proceed due to uncertainties about market demand.',
 
-  //    // "Despite showing promise and piquing the interest of investors, I hesitated to advance the project due to reservations about its commercial viability and genuine user need."
-  //    //
-  //  ],
-  //},
+      // "Despite showing promise and piquing the interest of investors, I hesitated to advance the project due to reservations about its commercial viability and genuine user need."
+      //
+    ],
+  },
   {
     list: true,
     good: true,
@@ -389,28 +378,34 @@ export const projects = [
       'Provided staff with comprehensive training and instructions on the new workflow, ensuring smooth adoption and implementation.',
     ],
   },
-  // {
-  //   list: true,
-  //   good: true,
-  //   name: 'Styleguide.ist',
-  //   startDate: '2021-10-02',
-  //   endDate: '2022-02-01',
-  //   fields: ['Frontend', 'UI/UX', 'Founder/Co-founder'],
-  //   technologies: ['React', 'TailwindCSS', 'Atomic design'],
-  //   // description:
-  //   //   "Generative parametric design tool to produce UI kits and components systems tailored to customer's brand styles.",
-  //   description:
-  //     "Generative UI tool designed to produce UI kits and component systems tailored to customer's brand styles.",
-  //   // description:
-  //   //   'Generative UI tool designed around the concept that most software shares a common UX, with variations primarily in UI parameters.',
-  //   bullets: [
-  //     'Conceived and pioneered the project as a solo founder, driving both the conceptualization and technical implementation.',
-  //     "Built an initial proof-of-concept to validate the technical feasibility and demonstrate the tool's potential to both potential customers and investors.",
-  //     'Introduced a few foundational components such as buttons, inputs, and blog posts,  enabling users to preserve universal UX while customizing specific UI parameters.',
-  //     // 'Decided to transition to other opportunities, recognizing the challenges of balancing individual projects with personal and professional commitments.',
-  //     'Due to personal commitments, the necessity of securing a job for financial stability, and challenges in obtaining investments, I decided to shift my focus away from the continued development of this project.',
-  //   ],
-  // },
+  {
+    list: true,
+    good: true,
+    name: 'Styleguide.ist',
+    startDate: '2021-10-02',
+    endDate: '2022-02-01',
+    fields: ['Frontend', 'UI/UX', 'Founder/Co-founder'],
+    technologies: [
+      'React',
+      'TailwindCSS',
+      'ThemeUI',
+      //
+      'Atomic design',
+    ],
+    // description:
+    //   "Generative parametric design tool to produce UI kits and components systems tailored to customer's brand styles.",
+    description:
+      "Generative UI tool designed to produce UI kits and component systems tailored to customer's brand styles.",
+    // description:
+    //   'Generative UI tool designed around the concept that most software shares a common UX, with variations primarily in UI parameters.',
+    bullets: [
+      'Conceived and pioneered the project as a solo founder, driving both the conceptualization and technical implementation.',
+      "Built an initial proof-of-concept to validate the technical feasibility and demonstrate the tool's potential to both potential customers and investors.",
+      'Introduced a few foundational components such as buttons, inputs, and blog posts,  enabling users to preserve universal UX while customizing specific UI parameters.',
+      // 'Decided to transition to other opportunities, recognizing the challenges of balancing individual projects with personal and professional commitments.',
+      'Due to personal commitments, the necessity of securing a job for financial stability, and challenges in obtaining investments, I decided to shift my focus away from the continued development of this project.',
+    ],
+  },
   {
     list: true,
     good: true,
@@ -509,7 +504,7 @@ export const projects = [
     name: 'Mori',
     startDate: '2023-04-01',
     endDate: '2023-09-01',
-    title: 'R&D Engineer',
+    title: 'Full-stack / AI developer',
     description:
       'A next-generation genealogy software designed to foster family connections.',
     fields: ['Frontend', 'Backend', 'AI'],
