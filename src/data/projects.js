@@ -1,5 +1,6 @@
 export const projects = [
   {
+    upd: true,
     list: true,
     good: true,
     name: 'DBGlass',
@@ -7,20 +8,21 @@ export const projects = [
     startDate: '2016-04-01',
     endDate: '2016-06-01',
     fields: ['Frontend', 'Backend'],
-    technologies: ['React', 'Redux', 'Electron', 'PostgreSQL'],
+    technologies: ['React', 'Redux', 'Electron', 'Bootstrap', 'PostgreSQL'],
     description: 'Desktop GUI client for Postgres database management.',
     links: [
       'https://github.com/web-pal/DBGlass',
       'http://dbglass.web-pal.com/',
     ],
     bullets: [
-      'Assisted in the development of the application with a focus on the React frontend.',
       "Participated in a project designed for internal use and practice within Web-pal, enhancing the team's database management tools.",
-      'Worked under the guidance of senior developers to understand and implement optimal solutions.',
-      //
+      'Focused on React frontend development, alongside with implementing SQL features.',
+
+      'Worked under the guidance of other developers to ensure code quality.',
     ],
   },
   {
+    upd: true,
     list: true,
     good: true,
     name: 'Hypefactors',
@@ -28,18 +30,20 @@ export const projects = [
     startDate: '2016-07-01',
     endDate: '2016-08-30',
     fields: ['Frontend'],
-    technologies: ['React-Native'],
+    technologies: ['React', 'Redux', 'React-Native'],
     description:
-      'Mobile application for real-time tracking and valuation of brand mentions across various media channels.',
+      'Mobile application for tracking and valuation of brand mentions across various media channels.',
     links: [
       'https://apkpure.com/jp/hypefactors-deprecated/com.hypefactors.app',
     ],
     bullets: [
       'Implemented the React Native interface based on provided designs.',
-      'Worked in tandem with backend developers to ensure integration and smooth data flow.',
+      'Collaborated with backend developers to ensure seamless data and API methods integration.',
+      // 'Worked in tandem with backend developers to ensure integration and smooth data flow.',
     ],
   },
   {
+    upd: true,
     list: true,
     good: true,
     name: 'Zenkraft Deliverable',
@@ -48,15 +52,15 @@ export const projects = [
     endDate: '2016-11-01',
     fields: ['Frontend'],
     technologies: ['React', 'Redux', 'SCSS'],
-    description:
-      'Service for shipping tracking and integrations within Salesforce ecosystem.',
+    description: 'Service for shipping tracking within Salesforce ecosystem.',
     bullets: [
       'Engaged as a junior frontend developer as part of my outsourcing role at Web-pal.',
-      'Worked on specific frontend tasks using React and Redux.',
+      'Developed various frontend features using React and Redux.',
       'Collaborated closely with backend developers for feature integrations.',
     ],
   },
   {
+    upd: true,
     list: true,
     good: true,
     name: 'Hostaway',
@@ -64,7 +68,7 @@ export const projects = [
     title: 'Middle Front-end Developer',
     endDate: '2017-03-01',
     fields: ['Frontend'],
-    technologies: ['React', 'Redux', 'React Native'],
+    technologies: ['React', 'Redux', 'React Native', 'Bootstrap'],
     description: 'Unified property management solution for property owners.',
     bullets: [
       'Developed various features for their dashboard.',
@@ -73,6 +77,7 @@ export const projects = [
     ],
   },
   {
+    upd: true,
     list: true,
     good: true,
     name: 'Chronos',
@@ -84,22 +89,20 @@ export const projects = [
       'React',
       'Electron',
       'AtlasKit',
-      'Figma',
+      'Sketch',
       'styled-components',
     ],
     description: 'Comprehensive time-tracking solution for JIRA.',
     links: ['https://chronos.web-pal.com/'],
     bullets: [
-      // "Architected the desktop application's UI/UX, offering deep Jira integration so users could manage their tickets within various projects directly from the timetracking interface.",
-      // "Architected the desktop application's UI/UX, offering deep Jira integration, allowing users to view tickets, see attachments, comment, change status and switch between projects directly within their timetracking interface.",
-      "Architected the desktop application's UI/UX, offering deep Jira integration so users could view tickets, see attachments, comment, change status and switch between projects directly within their timetracking interface.",
-      // "[[REWRITE_THAT_ONE. I JUST DESIGNED JIRA PLUGIN TO VIEW THE WORKFLOGS (AND PRODUCE REPORTS. MULTIPLE VIEWS?)]] Created the design for the Jira extension, focusing on efficient team management with various views to oversee the team's work within the Atlassian ecosystem.",
+      "Designed the desktop application's UI/UX, offering deep Jira integration so users can view tickets, see attachments, comment, change status, easily track time and switch between projects.",
       'Designed the Jira extension interface, enabling users to view and manage worklogs as well as generate reports, such as financial billing based on hourly rates.',
       'Designed and developed marketing page, highlighting its core functionalities and value propositions to promote the product.',
       'Worked in tandem with the team at Web-pal to bring the product to launch.',
     ],
   },
   {
+    upd: true,
     list: true,
     good: true,
     name: 'Web-pal',
@@ -110,21 +113,27 @@ export const projects = [
     technologies: [
       'React',
       'React Native',
+      'React Router',
       'Redux',
+      'Redux-thunk',
+      'Redux-saga',
       'Electron',
       'PostgreSQL',
       'styled-components',
+      // 'antd',
     ],
     description:
       'Served in a multi-faceted role at an agency, focusing on both internal tool development and client-focused outsourced projects.',
     links: ['http://web-pal.com/'],
     bullets: [
-      'Progressed from a junior developer role, eventually leading and mentoring my first junior developer.',
+      'Advanced from a junior developer position to a middle-level role, eventually taking on leadership duties and guiding my first junior developer.',
+      // 'Progressed from a junior developer role, eventually leading and mentoring my first junior developer.',
       'Engaged in a mix of outsourced client projects and development of internal agency tools.',
       'Worked collaboratively with a team, contributing to various projects and ensuring client satisfaction.',
     ],
   },
   {
+    upd: true,
     list: true,
     good: true,
     name: 'Hostaway',
@@ -132,16 +141,26 @@ export const projects = [
     startDate: '2018-01-01',
     endDate: '2018-06-01',
     fields: ['UI/UX'],
-    technologies: ['Sketch', 'Origami Studio', 'Framer'],
+    technologies: [
+      'Sketch',
+      'Zeplin',
+      'Origami Studio',
+      'Framer',
+      // 'Zeplin',
+      //
+    ],
     description: 'Unified property management solution for property owners.',
     bullets: [
-      "Spearheaded the design of Hostaway's dashboard version 3, providing a complete overhaul from its previous version.",
+      'Initiated redesign of the dashboard, providing a complete overhaul from its previous version.',
+      // "Spearheaded the design of Hostaway's dashboard version 3, providing a complete overhaul from its previous version.",
       // 'Undertook a comprehensive UI/UX redesign of the Hostaway dashboard, emphasizing modern design cues and improved usability.',
-      'Redesigned the mobile application interface, emphasizing modern design cues and improved usability.',
-      "Collaborated closely with the development team to ensure designs were feasible and met the platform's functional requirements.",
+      // 'Redesigned the mobile application interface, emphasizing modern design cues and improved usability.',
+      'Designed the mobile application.',
+      'Collaborated closely with the development team to ensure the correct application of the designs, providing necessery adjustments when needed.',
     ],
   },
   {
+    upd: true,
     list: true,
     good: true,
     notVeryGood: true,
@@ -151,8 +170,7 @@ export const projects = [
     endDate: '2019-06-30',
     fields: ['Frontend', 'Backend', 'Founder/Co-founder'],
     technologies: ['React', 'NodeJS', 'Prisma'],
-    description:
-      'An integrable chat widget tailored for website communities, blending elements of traditional forums with modern widget interfaces like Intercom.',
+    description: 'Community chat widget for websites.',
     bullets: [
       'Joined as the technical founder to advance the development of a community-focused chat widget, building upon existing groundwork.',
       'Managed a team of three developers, while also contributing hands-on development work.',
@@ -162,6 +180,7 @@ export const projects = [
     ],
   },
   {
+    upd: true,
     list: true,
     good: true,
     name: 'antcmd',
@@ -186,9 +205,9 @@ export const projects = [
     // description:
     //   'An experimental text interface tool, enabling the execution of diverse commands within a textual environment.',
     bullets: [
-      'Developed a versatile text interface allowing users to execute a variety of commands directly within the text environment.',
-      'Crafted commands for tasks including word suggestions, email management, company lookup (via Crunchbase), employee lookup (via Hunter), and others.',
-      // 'Implemented an array of commands for users such as finding similar words, fetching inbox emails, sending messages, looking up company details on Crunchbase, and listing employee emails.',
+      // 'Developed a versatile text interface allowing users to execute a variety of commands directly within the text environment.',
+      'Developed versatile text interface allowing users to execute a variety of commands directly within the text environment, using context around cursor and backslack commands (eg "tesla.com/lookup").',
+      'Implemented a suite of commands for cold email automation, including company lookup via Crunchbase, employee lookup via Hunter.io, email composing with Gmail integration, and others.',
       'Successfully packaged and released the tool as a standalone desktop application using Electron.',
     ],
     // links: [
@@ -197,6 +216,7 @@ export const projects = [
   },
 
   {
+    upd: true,
     list: true,
     good: true,
     name: 'MyFit',
@@ -208,12 +228,13 @@ export const projects = [
     description:
       'Fitness application showcasing resistance bands training tutorials.',
     bullets: [
-      'Developed and released a mobile applications (iOS and Android) using the no-code platform "Bravo Studio" with the collection of resistace bands training videos.',
-      "Integrated DatoCMS as the content management system for managing application's content.",
+      'Developed and released mobile applications (iOS and Android) using no-code platform "Bravo Studio" with the collection of resistace bands training videos.',
+      "Integrated DatoCMS for managing application's content.",
       'Additionally developed a Progressive Web Application (PWA) to provide users with the seamless web access and additional features.',
     ],
   },
   {
+    upd: true,
     list: true,
     good: true,
     name: 'Calmpaper',
@@ -221,35 +242,40 @@ export const projects = [
     endDate: '2020-12-17',
     fields: ['Frontend', 'Backend', 'Founder/Co-founder'],
     title: 'Full-stack developer / Founding engineer',
-    technologies: ['React', 'Next.js', 'Node', 'Prisma'],
+    technologies: ['React', 'Next.js', 'Node', 'Prisma', 'Stripe'],
     description:
-      'A community platform that allows writers to progressively publish their works and gain immediate feedback.',
+      'A community platform that allows writers to progressively publish their books, gain feedback and receive donations.',
     bullets: [
       'Joined as a technical founder and took the lead in executing the project.',
-      'Built the platform from scratch within two weeks, enabling features like book creation, chapter-by-chapter submissions, and a comprehensive system for comments, likes, replies, and notifications.',
+      'Built the platform from scratch within two weeks, enabling users to publish their books chapter-by-chapter, receive comments and engage with their audience.',
       // 'Developed and launched the platform, incorporating features like book creation, chapter-by-chapter submissions, and a robust system for comments, likes, replies, and notifications.',
-      'Despite initial strategies, we faced challenges in user engagement which led us to pivot: first, to a short stories format and later into manga-style content.',
-      'Ultimately, differences in vision and challenges in finding a product-market fit led us to parting ways with the co-founder.',
+      // 'Despite initial strategies, we faced challenges in user engagement which led us to pivot: first, to a short stories format and later into manga-style content.',
+      "We didn't hit the instant product-market fit, so the founder decided to pivot to reduce chapters size to 140 words (for content to be more engaging). Then this assumption didn't work and it was decided to pivot again, now to manga-like visual stories format.",
+      // 'Ultimately, differences in vision and challenges in finding a product-market fit led us to parting ways with the co-founder.',
+      'Eventually, the different visions and inability to find the product-market fit led us to part ways with the founder.',
       //
     ],
   },
   {
+    upd: true,
     list: true,
     good: true,
     name: 'Movenation',
     startDate: '2021-02-01',
-    endDate: '2021-04-21',
-    title: 'Front-end developer / Founding engineer',
+    endDate: '2021-06-21',
+    // title: 'Front-end developer / Founding engineer',
+    title: 'Founding Engineer',
     fields: ['Frontend', 'UI/UX', 'Founder/Co-founder'],
     technologies: ['React', 'Next.js', 'TailwindCSS', 'TailwindUI'],
     description:
-      'Co-founded an initiative to aid individuals relocating to new countries by linking them with expert communities for personalized advice.',
+      'Co-founded an initiative to aid individuals relocating to new countries by linking them with experts for personalized consultations.',
     bullets: [
-      'Designed and developed a test landing page using sample data to evaluate potential user interest.',
+      'Designed and developed a test landing page to evaluate potential user interest.',
       'Decided not to proceed further as the landing page did not meet our targeted conversion rate expectations.',
     ],
   },
   //{
+  //  upd: false,
   //  list: true,
   //  good: true,
   //  name: 'Hostaway',
@@ -265,9 +291,12 @@ export const projects = [
   //  ],
   //},
   {
+    upd: true,
     list: true,
     good: true,
     name: 'DAN.IT',
+    // title: 'Teacher',
+    title: 'Programming Tutor',
     startDate: '2021-06-01',
     endDate: '2021-08-01',
     fields: ['Education'],
@@ -279,65 +308,65 @@ export const projects = [
     ],
   },
   {
+    upd: true,
     list: true,
     good: true,
     name: 'type-j',
+    title: 'Founder',
     startDate: '2021-08-01',
     endDate: '2021-09-01',
     fields: ['Frontend', 'AI', 'UX', 'Founder/Co-founder'],
-    technologies: ['Chrome Extension', 'GPT-J'],
+    technologies: [
+      'Chrome Extension',
+      'GPT-J',
+      'LLM',
+      'Text generation',
+      //
+    ],
     // description: 'Chrome plugin experiment to generate text.',
     // description:
     //   "A Chrome extension powered by GPT-J, designed to aid writers in overcoming writer's block by introducing an innovative, iterative text generation process.",
     // description:
     //   "A Chrome extension powered by GPT-J, designed to aid writers in overcoming writer's block by offering real-time, contextually relevant text suggestions.",
     description:
-      "A Chrome extension powered by GPT-J, designed to aid writers in overcoming writer's block by offering real-time, contextually relevant text suggestions.",
+      "A Chrome extension powered by GPT-J, designed to aid writers in overcoming writer's block by offering contextually relevant text suggestions.",
     bullets: [
       // 'Invented an iterative text generation approach, allowing users to start with a single word and progressively expand to phrase, sentence, paragraph, section, or full-scale article.',
-      'Invented an iterative text generation approach, allowing users to start with a single word and sequentially build upon it - to phrase, sentence, paragraph, section, and ultimately full-scale article.',
+      'Invented an iterative text generation approach, where users start with a single word suggestion and progressively build upon it - to phrase, sentence, paragraph, section, and ultimately full-scale articles/chapters.',
       'At each step, users are offered several context-aware choices that build cohesively upon their previous selections.',
-      // "Invented an iterative text generation approach, where users begin with a single word and sequentially build upon it—from phrases to sentences, paragraphs, sections, and ultimately full articles. At each stage, multiple contextually relevant options are presented, seamlessly integrating the user's prior selections.",
       'Halted development due to uncertainty in pinpointing a target market, coupled with concerns about commercial viability.',
+      // "Invented an iterative text generation approach, where users begin with a single word and sequentially build upon it—from phrases to sentences, paragraphs, sections, and ultimately full articles. At each stage, multiple contextually relevant options are presented, seamlessly integrating the user's prior selections.",
     ],
   },
   {
+    upd: true,
     list: true,
     good: true,
     name: 'tldr.app',
+    title: 'Founder',
     startDate: '2021-09-02',
     endDate: '2021-10-01',
     fields: ['Frontend', 'AI', 'UX', 'Founder/Co-founder'],
-    technologies: ['Chrome Extension', 'HuggingFace'],
+    technologies: [
+      'Chrome Extension',
+      'HuggingFace',
+      'LLM',
+      'Text summarization',
+    ],
     // description: 'Chrome plugin to summarize any piece of text on the web.',
     description:
-      'A Chrome extension powered by the DistilBERT model, designed to quickly generate concise text summaries for any text content on the web.',
+      'Text summarization Chrome Extension, powered by DistilBERT model.',
+    // 'A Chrome extension powered by the DistilBERT model, designed to quickly generate concise text summaries for any text content on the web.',
     // description:
     //   'A user-friendly Chrome extension leveraging the DistilBERT model to generate concise text summaries for any web content.',
     bullets: [
       'Developed a unique interaction method for on-the-fly text summarization.',
+      'Utilized Huggingface API and DistilBERT model to act as a summarization model.',
       // 'Implemented an intuitive interface for instant text summarization in browser.',
       'Attracted potential investment interest but opted not to proceed due to uncertainties about market demand.',
 
       // "Despite showing promise and piquing the interest of investors, I hesitated to advance the project due to reservations about its commercial viability and genuine user need."
       //
-    ],
-  },
-  {
-    list: true,
-    good: true,
-    name: 'Vividaura',
-    startDate: '2022-02-02',
-    endDate: '2022-02-10',
-    title: 'Front-end developer',
-    fields: ['Frontend'],
-    technologies: ['React', 'KonvaJS'],
-    description:
-      'Developed an infinite zoomable canvas interface for an NFT-based project, allowing users to showcase their digital assets collaboratively.',
-    bullets: [
-      'Designed an interactive canvas where users can drag, rotate, and resize objects, including images and GIFs, to craft a unique digital moodboard.',
-      `Incorporated a "land-purchase" system, ensuring objects can only be placed within the bounderies of the user's purchased tiles.`,
-      "Applied constraints to maintain the integrity of each user's land, preventing overlap or spillage into others' territories.",
     ],
   },
   //{
@@ -351,6 +380,59 @@ export const projects = [
   //  ],
   //},
   {
+    upd: true,
+    list: true,
+    good: true,
+    name: 'Styleguide.ist',
+    title: 'Founder',
+    startDate: '2021-10-02',
+    endDate: '2022-02-01',
+    fields: ['Frontend', 'UI/UX', 'Founder/Co-founder'],
+    technologies: [
+      'React',
+      'TailwindCSS',
+      'ThemeUI',
+      //
+      'Atomic design',
+    ],
+    // description:
+    //   "Generative parametric design tool to produce UI kits and components systems tailored to customer's brand styles.",
+    description:
+      "Generative UI tool designed to produce UI kits and component systems tailored to customer's brand styles.",
+    // description:
+    //   'Generative UI tool designed around the concept that most software shares a common UX, with variations primarily in UI parameters.',
+    bullets: [
+      'Conceived and pioneered the project as a solo founder, driving both the conceptualization and technical implementation.',
+      "Built an initial proof-of-concept to validate the technical feasibility and demonstrate the tool's potential to both potential customers and investors.",
+      'Introduced a few foundational components such as buttons, inputs, and blog posts,  enabling users to adjust components look by customizing specific UI parameters, while preserving the UX (layout).',
+      // 'Decided to transition to other opportunities, recognizing the challenges of balancing individual projects with personal and professional commitments.',
+      'Due to challenges in obtaining investments and necessity of securing a job for financial stability, I decided to shift my focus away from the continued development of this project.',
+    ],
+  },
+  {
+    upd: true,
+    list: true,
+    good: true,
+    name: 'Vividaura',
+    startDate: '2022-02-02',
+    // endDate: '2022-02-10',
+    title: 'Front-end developer',
+    fields: ['Frontend'],
+    technologies: [
+      'React',
+      // 'Konva',
+      'KonvaJS',
+    ],
+    description:
+      'NFT-based moodboard to let people showcase their digital assets collaboratively.',
+    bullets: [
+      'Designed an interactive zoomable canvas where users can drag, rotate, and resize objects, including images and GIFs, to craft a unique digital moodboards.',
+      `Incorporated a 'land-purchase' system, ensuring objects can only be placed within the bounderies of the user's purchased tiles.`,
+      "Applied constraints to maintain the integrity of each user's land, preventing overlap into other users territories.",
+    ],
+  },
+  {
+    upd: true,
     list: true,
     good: true,
     name: 'DM6Labs',
@@ -375,42 +457,15 @@ export const projects = [
       'Utilized Zappier to bridge different platforms and automate the entire process.',
       // 'Developed an email notification system through Mailgun to prompt patients for consultations and deliver test results.',
       // 'Designed a utility for QR code generation and printing, serving as an alternative method for patients to book consultations.',
-      'Provided staff with comprehensive training and instructions on the new workflow, ensuring smooth adoption and implementation.',
+      'Provided staff with comprehensive training and instructions on the new workflow, ensuring smooth adoption.',
     ],
   },
   {
-    list: true,
-    good: true,
-    name: 'Styleguide.ist',
-    startDate: '2021-10-02',
-    endDate: '2022-02-01',
-    fields: ['Frontend', 'UI/UX', 'Founder/Co-founder'],
-    technologies: [
-      'React',
-      'TailwindCSS',
-      'ThemeUI',
-      //
-      'Atomic design',
-    ],
-    // description:
-    //   "Generative parametric design tool to produce UI kits and components systems tailored to customer's brand styles.",
-    description:
-      "Generative UI tool designed to produce UI kits and component systems tailored to customer's brand styles.",
-    // description:
-    //   'Generative UI tool designed around the concept that most software shares a common UX, with variations primarily in UI parameters.',
-    bullets: [
-      'Conceived and pioneered the project as a solo founder, driving both the conceptualization and technical implementation.',
-      "Built an initial proof-of-concept to validate the technical feasibility and demonstrate the tool's potential to both potential customers and investors.",
-      'Introduced a few foundational components such as buttons, inputs, and blog posts,  enabling users to preserve universal UX while customizing specific UI parameters.',
-      // 'Decided to transition to other opportunities, recognizing the challenges of balancing individual projects with personal and professional commitments.',
-      'Due to personal commitments, the necessity of securing a job for financial stability, and challenges in obtaining investments, I decided to shift my focus away from the continued development of this project.',
-    ],
-  },
-  {
+    upd: true,
     list: true,
     good: true,
     name: 'Trialproofer',
-    title: 'Front-end developer',
+    title: 'Frontend developer',
     startDate: '2022-07-01',
     endDate: '2022-09-01',
     fields: ['Frontend'],
@@ -427,15 +482,17 @@ export const projects = [
     // description:
     //   'Legal case preparation and management tool, featuring a specialized text editor that streamlines note-taking and case organization process for legal professionals.',
     description:
-      'Legal case preparation and management tool, featuring a specialized text editor that streamlines case documentation and organization for legal professionals.',
+      // 'Legal case preparation tool, featuring a specialized text editor to enhance case documentation and organization for legal professionals.',
+      'Legal case preparation tool.',
     bullets: [
       // "Initiated and executed the build of a dynamic text editor from scratch, uniquely equipped with autocomplete functions and tailored for handling legal case entities such as 'witness', 'evidence', etc. This editor was specifically designed to streamline and enrich the note-taking process for legal professionals within individual case notebooks.",
       // 'Initiated and executed the build of a dynamic text editor from scratch, uniquely equipped with autocomplete functions and tailored for handling legal case requirements. This editor was specifically designed to streamline and enrich the note-taking process for legal professionals within individual case notebooks.',
       // 'Initiated and executed the build of a dynamic text editor from scratch, uniquely equipped with autocomplete functions and tailored for handling legal case requirements.',
       // 'Initiated and executed the build of a dynamic text editor from scratch, tailored specifically for handling legal case requirements.',
-      'Developed a specialized text editor from scratch, tailored specifically for capturing, organizing, and referencing legal case specifics.',
+      // 'Developed a specialized text editor from scratch, tailored specifically for capturing, organizing, and referencing legal case specifics.',
+      // 'Developed a text editor with Tiptap, tailored specifically for capturing, organizing, and referencing legal case specifics.',
+      'Developed a specialized text editor, tailored specifically for capturing, organizing, and referencing legal case specifics.',
       'Implemented a comprehensive note management system designed to accommodate the dynamic nature of legal workflows, facilitating the addition of supplementary chapters and ensuring logical case structuring.',
-
       'Incorporated legal domain-specific functionalities into the editor, enabling intricate management of various law entities, such as  "witness", "evidence", "authority", etc.',
 
       // 'Devised a flexible note management system catering to dynamic legal workflows, allowing the addition of extra chapters, continuous modification, and intuitive organization for comprehensive case tracking.',
@@ -450,6 +507,7 @@ export const projects = [
     ],
   },
   {
+    upd: true,
     list: true,
     good: true,
     name: 'Machcast',
@@ -458,7 +516,8 @@ export const projects = [
     title: 'Founding Engineer',
     fields: ['Frontend', 'Backend', 'AI', 'Founder/Co-founder'],
     description:
-      'AI-driven platform designed to extract engaging moments from long videos for distribution on short-form content social media platforms (TikTok, Instagram Reels and Youtube Shorts).',
+      // 'AI-driven platform designed to extract engaging moments from long videos for distribution on short-form content social media platforms (TikTok, Instagram Reels and Youtube Shorts).',
+      'Software that turns long videos into engaging short-form content using AI.',
     technologies: [
       'React',
       'Node',
@@ -475,17 +534,12 @@ export const projects = [
       'RDS',
     ],
     bullets: [
-      'Took on the challenge of developing an innovative solution to extract compelling clips from longer videos, despite initial uncertainties.',
-      'Built the pipeline to extract audio from videos, transcribe the audio into text, and segment the videos based on the transcription, heavily leveraging the AssemblyAI API.',
-      // 'Collaborated with the third co-founder to build the backend, focusing on the actual rendering, exporting, and modification of the clips with functionalities like captioning, subtitling, cropping and other effects.',
-      'Collaborated with the third co-founder on the development of the user interface and backend, specifically focusing on the editing, rendering, and exporting clips.',
-      'Fine-tuned GPT model for clip title generation using the dataset I have curated.',
-      'Despite significant progress, project was halted due to differing founder visions and collaboration concerns.',
-
-      // 'Joined as a technical co-founder and played a pivotal role in steering the project toward its envisioned goals.',
-      // 'Significantly progressed in the development phase, achieving near completion of the platform.',
-      // 'Made a joint decision to discontinue the project before launch, recognizing differing visions and long-term collaboration concerns among the founding team.',
-      // 'Despite substantial progress, mutually decided to halt the project due to divergent visions and concerns about long-term collaboration dynamics among the founding team.',
+      // 'Built the pipeline transcribing videos into text, then segmenting into short semantically meaningful chunks and producing the actual clips.',
+      'Built the pipeline extracting audio from videos, transforming it into text, then segmenting into short semantically meaningful distinct parts and producing the actual clips.',
+      'Developed frontend and video editor interface to add captions, subtitles, trim, crop videos for specific platforms and apply additional effects (such as background blur).',
+      'Developed backend service to edit the videos using ffmpg.',
+      'Fine-tuned GPT model for clip title generation.',
+      // 'long-term collaboration concerns among the founding team.',
     ],
   },
   //{
@@ -499,6 +553,7 @@ export const projects = [
   //  ],
   //},
   {
+    upd: true,
     list: true,
     good: true,
     name: 'Mori',
@@ -506,6 +561,7 @@ export const projects = [
     endDate: '2023-09-01',
     title: 'Full-stack / AI developer',
     description:
+      // 'A next-generation genealogy tree building software designed to foster family connections.',
       'A next-generation genealogy software designed to foster family connections.',
     fields: ['Frontend', 'Backend', 'AI'],
     platforms: ['Web'],
@@ -526,20 +582,43 @@ export const projects = [
       // 'Text-to-speech',
       'OCR',
       'Face recognition',
+      'Prompt engineering',
       // 'Serper',
       'Chakra UI',
-      'TypeScript',
       'GEDCOM',
     ],
+    // technologies: [
+    //   'React',
+    //   'Node',
+    //   'Prisma',
+    //   'TypeScript',
+    //   'Chakra UI',
+    //   'GEDCOM',
+    //   'OpenAI',
+    //   'Claude',
+    //   'Supabase',
+    //   'Azure',
+    //   'AWS Lambda',
+    //   'S3',
+    //   'Replicate',
+    //   'Remotion',
+    //   'Speechmatics',
+    //   'Photo enhancement',
+    //   'Speech-to-text',
+    //   'Text-to-speech',
+    //   'OCR',
+    //   'Face recognition',
+    //   'Prompt engineering',
+    //   // 'Serper',
+    // ],
     bullets: [
-      // 'Spearheaded the complete development of the media gallery, integrating cutting-edge features such as photo enhancement, audio transcription, OCR, and text translation.',
-      'Spearheaded the complete development of the media gallery, enhanced with AI features such as photo enhancement, audio transcription, OCR, and text translation.',
-      // 'Pioneered "MemoryClips": A dynamic product that translates GEDCOM data into personalized video stories. Integrated Remotion for video creation, AWS Lambda for scalable processing, Google Images Search API for enriching content, and Azure Text-to-Speech for immersive narration.',
-      // 'Pioneered MemoryClips: A solution that turns GEDCOM files into personalized video stories.',
-      // 'Leveraged Remotion for video creation, AWS Lambda for scalable processing, Google Images Search API for enriching content, and Azure Text-to-Speech for narration.',
-      'Pioneered "MemoryClips": A solution that turns GEDCOM files into personalized video stories. Leveraged Remotion for video creation, AWS Lambda for scalable processing, Google Images Search API for enriching content, and Azure Text-to-Speech for narration.',
-      // 'Defined the long-term roadmap for the MemoryClips project, ensuring alignment with company vision and user demands.',
-      'Crafted a strategic vision and outlined further development trajectory for the MemoryClips',
+      'Built media gallery from the ground up, equipped with AI features such as photo restoration, text recognition, audio transcription and text translation.',
+      "Pioneered 'MemoryClips': A tool transforming GEDCOM files into personalized video stories. Utilized Claude LLM, Azure Text-to-Speech and Google Images Search API to produce script narratives.",
+      // 'Utilized Remotion alongside AWS Lambda and S3 services to facilitate large-scale video rendering.',
+      // 'Utilized Remotion alongside AWS Lambda and S3 services for scalable video rending.',
+      'Utilized Remotion, AWS Lambda and S3 services for video rending at scale.',
+      // 'Utilized Remotion, AWS Lambda and S3 services for scalable video rending.',
+      // 'Crafted a strategic vision and outlined further development trajectory for the MemoryClips',
     ],
   },
   //{

@@ -8,54 +8,61 @@ const List = () => {
   return (
     <div
       className="flex flex-col _space-y-8p-6 px-12 py-12 origin-top-left"
-      style={{ transform: 'scale(0.95)' }}
+      style={{}}
     >
-      {/*
-      <button className="bg-tomatoA-4 hover:bg-tomato-5 text-tomatoA-11">
-        Button
-      </button>
       <a
-        href="mailto:oogxdd@gmail.com"
-        className="text-sm absolute top-3.5 right-4"
+        href="mailto:ignatif@gmail.com"
+        className="text-sm text-blue-500 absolute top-3.5 right-4"
       >
-        oogxdd@gmail.com
+        ignatif@gmail.com
       </a>
-      */}
-      <div className="text-lg mt-12 sm:mt-8 mb-4">
+      <div
+        className="text-lg mt-12 sm:mt-8 mb-4"
+        style={{
+          fontSize: 17,
+        }}
+      >
         Hi, I'm <b className="font-medium">Maxim Ignatev</b>, a full-stack
         developer with AI expertise and design background.
         <br />
-        {/*
-        <br />I can spearhead projects independently or integrate seamlessly
-        within a team to drive
-        <br />
-        impactful outcomes. Dive into my projects below to see the value I bring
-        to the table:
-*/}
+      </div>
+      <div
+        className="flex flex-col text-sm text-gray-800 mb-4 _gap-y-0.5"
+        style={{
+          fontSize: 15,
+          // lineHeight: '130%',
+        }}
+      >
+        <div>6 years - Frontend experience</div>
+        <div>3 years - Backend experience</div>
+        <div>1.5 years - UI/UX experience</div>
+        <div>1 year - AI-related experience</div>
+      </div>
+      <div
+        className="text-gray-800 mb-4 text-sm"
+        style={{
+          fontSize: 15,
+          // lineHeight: '130%',
+        }}
+      >
+        Proficiency in: React, Next.js, Tailwind, GraphQL, Hasura, Prisma,
+        Apollo, Typescript, Tiptap
       </div>
       {/*
-      <div className="flex flex-col  border-red-300 border-b">
-        <div className="flex items-center w-full justify-between mb-2">
-          <span className="font-semibold text-xl">Maxim Ignatev</span>
-          <a href="mailto:oogxdd@gmail.com" className="text-sm">
-            oogxdd@gmail.com
-          </a>
-        </div>
-        <div className="text-sm">
-          A self-driven developer with a distinctive design background.
-          <br />
-          <br />
-          My skills transform ideas into functional products, with a balance of technical precision and aesthetic appeal.
-          <br />
-          <br />
-    I prioritize clear communication, ensuring alignment and teamwork to achieve collective goals.
-        </div>
+      <div
+        className="text-gray-800 mb-4 text-sm"
+        style={{
+          fontSize: 15,
+          // lineHeight: '130%',
+        }}
+      >
+        Fimiliar with: React Native, Electron, Vue
       </div>
-      <span className="mt-12 text-xs tracking-wider font-bold text-gray-400 uppercase">
-        My experience:
-      </span>
       */}
-      <div className=" divide-y max-w-3xl">
+      <div className="text-lg font-semibold mt-12" style={{ fontSize: 20 }}>
+        Work history:
+      </div>
+      <div className="-mt-3 divide-y max-w-3xl">
         {projects
           .filter((i) => !!i.list)
           .reverse()
@@ -65,9 +72,13 @@ const List = () => {
               key={`${project.startDate}-${project.name}`}
             />
           ))}
-        <div className="w-full h-screen flex-col md:h-auto pt-0 md:pt-6 pb-0 md:pb-2 md:items-start flex items-center justify-center">
-          <div className="flex divide-x gap-x-5 text-base text-sky-600">
-            <a href="mailto:oogxdd@gmail.com" className="_pl-4" target="_blank">
+        <div className="w-full h-screen flex-col md:h-auto pt-0 md:pt-4 pb-0 md:pb-2 md:items-start flex items-center justify-center">
+          <div className="flex divide-x gap-x-5 text-base text-blue-500">
+            <a
+              href="mailto:ignatif@gmail.com"
+              className="_pl-4"
+              target="_blank"
+            >
               ignatif@gmail.com
             </a>
 
@@ -76,7 +87,7 @@ const List = () => {
               className="pl-4"
               target="_blank"
             >
-              GitHub
+              Github
             </a>
 
             {/*
@@ -112,7 +123,7 @@ const List = () => {
 }
 
 const Project = ({ project }) => (
-  <div className="flex flex-col space-y-3 mb-6 pt-6 avoid-break">
+  <div className="flex flex-col space-y-3 mb-4 pb-4 pt-8 avoid-break">
     <div className="flex flex-col">
       {/*
       <p className="mt-b text-xs text-gray-600">
@@ -124,20 +135,29 @@ const Project = ({ project }) => (
         {formatDate(project.startDate)}
         {project.endDate ? ` - ${formatDate(project.endDate)}` : ''}
       </p>
-      <h2
-        className="text-xl text-gray-900 font-bold flex items-center"
-        style={{
-          fontSize: 21,
-        }}
-      >
-        <span className="font-medium text-gray-800">{`${project.title} at `}</span>
-        <span className="ml-1.5">{project.name}</span>
-        {/* project.good && (
-          <CheckIcon className="ml-1 w-4 h-4 text-green-600 mt-[1.5px] inline" />
-        ) */}
-      </h2>
+
+      <div className="flex items-center justify-between">
+        <h2
+          className="text-xl text-gray-900 font-bold flex items-center"
+          style={{
+            fontSize: 20,
+          }}
+        >
+          <span className="font-medium text-gray-800">{`${project.title} at `}</span>
+          <span className="ml-1.5">{project.name}</span>
+
+          {/* project.upd && (
+            <CheckIcon className="ml-1 w-4 h-4 text-green-600 inline" />
+          ) */}
+        </h2>
+      </div>
     </div>
-    <p className="text-sm mt-2 text-gray-600 text-lg">{project.description}</p>
+    <p
+      className="text-sm mt-1.5 text-gray-600 text-lg"
+      style={{ marginTop: 8 }}
+    >
+      {project.description}
+    </p>
     {project.bullets?.length > 0 && (
       <ul className="list-disc list-outside mt-2 space-y-2 pl-5 text-md">
         {/*
@@ -173,6 +193,20 @@ const Project = ({ project }) => (
         </React.Fragment>
       ))}
     </div>
+    {project.title === 'Founder' && (
+      <div
+        className="px-1.5 py-0.5 text-sm rounded-full border border-1 border-orange-600 color-orange-600 flex items-center justify-center text-gray-600 text-orange-600"
+        style={{
+          fontSize: 11.5,
+          height: 22,
+          fontWeight: 500,
+          width: 'max-content',
+          marginTop: 4,
+        }}
+      >
+        Indie project
+      </div>
+    )}
     {/*
     <div className="flex">
       {project.technologies.map((tag) => (
@@ -218,5 +252,11 @@ const Tag = ({ children, selected = false }) => {
     </div>
   )
 }
+
+// {/*
+// <button className="bg-tomatoA-4 hover:bg-tomato-5 text-tomatoA-11">
+//   Button
+// </button>
+//  */}
 
 export default List
