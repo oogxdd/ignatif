@@ -17,33 +17,38 @@ const List = () => {
         ignatif@gmail.com
       </a>
       <div
-        className="text-lg mt-12 sm:mt-8 mb-4"
+        className="text-lg mt-14 sm:mt-8 mb-4"
         style={{
           fontSize: 17,
         }}
       >
-        Hi, I'm <b className="font-medium">Maxim Ignatev</b>, a full-stack
+        Hi, I'm <b className="font-semibold">Maxim Ignatev</b>, a full-stack
         developer with AI expertise and design background.
         <br />
       </div>
-      <div
-        className="flex flex-col text-sm text-gray-800 mb-4 _gap-y-0.5"
-        style={{
-          fontSize: 15,
-          // lineHeight: '130%',
-        }}
-      >
-        <div>6 years - Frontend experience</div>
-        <div>3 years - Backend experience</div>
-        <div>1.5 years - UI/UX experience</div>
-        <div>1 year - AI-related experience</div>
+      <div className="flex flex-col">
+        <div className=" mb-2">Experience</div>
+        <ul
+          className="space-y-0.5 flex flex-col text-m text-gray-800 mb-4 _gap-y-0.5 ml-2 list-disc list-inside"
+          style={{
+            fontSize: 15,
+            // lineHeight: '130%',
+          }}
+        >
+          <li>Frontend - 6 years</li>
+          <li>Backend - 4 years</li>
+          <li>UI/UX - 1.5 years</li>
+          <li>AI - 1 years</li>
+        </ul>
       </div>
       <div
-        className="text-gray-800 mb-4 text-sm"
-        style={{
-          fontSize: 15,
-          // lineHeight: '130%',
-        }}
+        className="mb-4"
+        style={
+          {
+            // fontSize: 15,
+            // lineHeight: '130%',
+          }
+        }
       >
         Proficiency in: React, Next.js, Tailwind, GraphQL, Hasura, Prisma,
         Apollo, Typescript, Tiptap

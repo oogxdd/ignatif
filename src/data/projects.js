@@ -516,8 +516,8 @@ export const projects = [
     title: 'Founding Engineer',
     fields: ['Frontend', 'Backend', 'AI', 'Founder/Co-founder'],
     description:
-      // 'AI-driven platform designed to extract engaging moments from long videos for distribution on short-form content social media platforms (TikTok, Instagram Reels and Youtube Shorts).',
-      'Software that turns long videos into engaging short-form content using AI.',
+      'AI-driven platform designed to extract engaging moments from the long videos to distribute on short-form content social media platforms.',
+    // 'Software that turns long videos into engaging short-form content using AI.',
     technologies: [
       'React',
       'Node',
@@ -535,7 +535,8 @@ export const projects = [
     ],
     bullets: [
       // 'Built the pipeline transcribing videos into text, then segmenting into short semantically meaningful chunks and producing the actual clips.',
-      'Built the pipeline extracting audio from videos, transforming it into text, then segmenting into short semantically meaningful distinct parts and producing the actual clips.',
+      // 'Built the pipeline extracting audio from videos, transforming it into text, then segmenting into short semantically meaningful distinct parts and producing the actual clips.',
+      'Built the media pipeline transforming long videos into the end clips.',
       'Developed frontend and video editor interface to add captions, subtitles, trim, crop videos for specific platforms and apply additional effects (such as background blur).',
       'Developed backend service to edit the videos using ffmpg.',
       'Fine-tuned GPT model for clip title generation.',
@@ -612,11 +613,11 @@ export const projects = [
     //   // 'Serper',
     // ],
     bullets: [
-      'Built media gallery from the ground up, equipped with AI features such as photo restoration, text recognition, audio transcription and text translation.',
+      'Built media gallery from the ground up, equipped with AI features such as photo restoration, image text recognition, audio transcription and translation.',
       "Pioneered 'MemoryClips': A tool transforming GEDCOM files into personalized video stories. Utilized Claude LLM, Azure Text-to-Speech and Google Images Search API to produce script narratives.",
       // 'Utilized Remotion alongside AWS Lambda and S3 services to facilitate large-scale video rendering.',
       // 'Utilized Remotion alongside AWS Lambda and S3 services for scalable video rending.',
-      'Utilized Remotion, AWS Lambda and S3 services for video rending at scale.',
+      'Utilized Remotion, AWS Lambda and S3 services for scalable video rending.',
       // 'Utilized Remotion, AWS Lambda and S3 services for scalable video rending.',
       // 'Crafted a strategic vision and outlined further development trajectory for the MemoryClips',
     ],
