@@ -4,6 +4,38 @@ import { fieldColors, fieldTextColors } from '@/data/fields'
 import { formatDate } from '@/utils'
 import { CheckIcon } from '@heroicons/react/24/outline'
 
+const Experience = () => (
+  <>
+    <div className="flex flex-col">
+      <div className=" mb-2">Experience</div>
+      <ul
+        className="space-y-0.5 flex flex-col text-m text-gray-800 mb-4 _gap-y-0.5 ml-2 list-disc list-inside"
+        style={{
+          fontSize: 15,
+          // lineHeight: '130%',
+        }}
+      >
+        <li>Frontend - 6 years</li>
+        <li>Backend - 4 years</li>
+        <li>UI/UX - 1.5 years</li>
+        <li>AI - 1 years</li>
+      </ul>
+    </div>
+    <div
+      className="mb-4"
+      style={
+        {
+          // fontSize: 15,
+          // lineHeight: '130%',
+        }
+      }
+    >
+      Proficiency in: React, Next.js, Tailwind, GraphQL, Hasura, Prisma, Apollo,
+      Typescript, Tiptap
+    </div>
+  </>
+)
+
 const List = () => {
   return (
     <div
@@ -26,33 +58,9 @@ const List = () => {
         developer with AI expertise and design background.
         <br />
       </div>
-      <div className="flex flex-col">
-        <div className=" mb-2">Experience</div>
-        <ul
-          className="space-y-0.5 flex flex-col text-m text-gray-800 mb-4 _gap-y-0.5 ml-2 list-disc list-inside"
-          style={{
-            fontSize: 15,
-            // lineHeight: '130%',
-          }}
-        >
-          <li>Frontend - 6 years</li>
-          <li>Backend - 4 years</li>
-          <li>UI/UX - 1.5 years</li>
-          <li>AI - 1 years</li>
-        </ul>
-      </div>
-      <div
-        className="mb-4"
-        style={
-          {
-            // fontSize: 15,
-            // lineHeight: '130%',
-          }
-        }
-      >
-        Proficiency in: React, Next.js, Tailwind, GraphQL, Hasura, Prisma,
-        Apollo, Typescript, Tiptap
-      </div>
+      {/*
+      <Experience />
+      */}
       {/*
       <div
         className="text-gray-800 mb-4 text-sm"
