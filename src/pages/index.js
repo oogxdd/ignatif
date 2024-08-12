@@ -217,7 +217,7 @@ const Project = ({ project }) => (
           marginTop: 4,
         }}
       >
-        Indie project
+        Personal project
       </div>
     )}
     {/*
