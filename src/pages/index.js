@@ -23,51 +23,7 @@ export default function ResumePage() {
         <ProjectsList />
         <Footer />
       </div>
-      <ThemeToggle />
     </div>
-  )
-}
-
-const ThemeToggle = () => {
-  const [isDark, setIsDark] = useState(false)
-
-  useEffect(() => {
-    // Check if the user has a saved preference
-    const savedTheme = localStorage.getItem('theme')
-    if (savedTheme) {
-      setIsDark(savedTheme === 'dark')
-    } else {
-      // If no saved preference, use dark theme by default
-      setIsDark(true)
-    }
-  }, [])
-
-  useEffect(() => {
-    // Update the HTML class and localStorage when isDark changes
-    if (isDark) {
-      document.documentElement.classList.add('dark')
-      localStorage.setItem('theme', 'dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-      localStorage.setItem('theme', 'light')
-    }
-  }, [isDark])
-
-  const toggleTheme = () => {
-    setIsDark(!isDark)
-  }
-
-  return (
-    <button
-      onClick={toggleTheme}
-      className="fixed top-4 right-4 p-2 rounded-full hover:bg-sand-3 text-sand-9"
-    >
-      {isDark ? (
-        <SunIcon className="w-5 h-5" />
-      ) : (
-        <MoonIcon className="w-5 h-5" />
-      )}
-    </button>
   )
 }
 
@@ -103,8 +59,10 @@ const ProjectsList = () => {
   return (
     <div className="flex flex-col">
       {/*
-      <p className="font-medium text-lg mb-4">Experience</p>
-*/}
+      <p className="font-medium text-lg mb-4 text-sand-12 border-b border-sand-6 pb-3">
+        Experience
+      </p>
+       */}
       <div className="flex flex-col">
         {Object.entries(groupedProjects)
           .sort((a, b) => b[0] - a[0]) // Sort years in descending order

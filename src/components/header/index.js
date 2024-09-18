@@ -21,19 +21,19 @@ const Header = ({
     <p className="mb-4 dark:text-sand-11">{description}</p>
     <div className="flex space-x-2.5">
       <Icon
-        href={`mailto:${email}`}
+        href={`mailto:ignatif@gmail.com`}
         icon={<EnvelopeClosedIcon className="w-[18px] h-[18px]" />}
       />
       <Icon
-        href={github}
+        href="https://github.com/oogxdd"
         icon={<GitHubLogoIcon className="w-[18px] h-[18px]" />}
       />
       <Icon
-        href={linkedin}
+        href="https://www.linkedin.com/in/maxim-ignatev/"
         icon={<LinkedInLogoIcon className="w-[18px] h-[18px]" />}
       />
       <Icon
-        href={twitter}
+        href="https://x.com/oogxdd"
         icon={<TwitterLogoIcon className="w-[18px] h-[18px]" />}
       />
     </div>
