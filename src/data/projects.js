@@ -89,7 +89,7 @@ export const projects = [
   },
   {
     name: 'Mori',
-    startDate: '2023-03-01',
+    startDate: '2023-04-01',
     endDate: '2023-09-01',
     title: 'Full-stack / AI developer',
     description:

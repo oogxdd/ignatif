@@ -1,3 +1,5 @@
 export const Paragraph = ({ children, className = '' }) => (
-  <div className={`text-sand-12 ${className}`}>{children}</div>
+  <div className={`text-sand-12 text-[15px] sm:text-base ${className}`}>
+    {children}
+  </div>
 )

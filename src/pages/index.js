@@ -3,14 +3,12 @@ import { projects } from '@/data/projects'
 import Header from '@/components/header'
 import Project from '@/components/project'
 import { DateLabel } from '@/components/common'
-
-// import { SunIcon, MoonIcon } from '@radix-ui/react-icons'
 import { Sun as SunIcon, Moon as MoonIcon } from 'lucide-react'
 
 export default function ResumePage() {
   return (
     <div className="min-h-screen w-screen bg-sand-1 _bg-violet-3 relative">
-      <div className="p-16 py-12 max-w-5xl">
+      <div className="p-4 py-8 sm:p-8 md:p-16 md:py-12 max-w-5xl mx-auto">
         <Header
           name="Maxim Ignatev"
           role="Fullstack / AI Engineer"
@@ -58,18 +56,13 @@ const ProjectsList = () => {
 
   return (
     <div className="flex flex-col">
-      {/*
-      <p className="font-medium text-lg mb-4 text-sand-12 border-b border-sand-6 pb-3">
-        Experience
-      </p>
-       */}
       <div className="flex flex-col">
         {Object.entries(groupedProjects)
-          .sort((a, b) => b[0] - a[0]) // Sort years in descending order
+          .sort((a, b) => b[0] - a[0])
           .map(([year, yearProjects]) => (
             <div key={year} className="flex flex-col mb-6">
               <DateLabel>{year}</DateLabel>
-              <div className="flex flex-col gap-y-2 mt-2">
+              <div className="flex flex-col gap-y-0.5 sm:gap-y-2 mt-2">
                 {yearProjects.map((project) => (
                   <Project
                     key={project.name}
@@ -88,8 +81,13 @@ const ProjectsList = () => {
 
 const Footer = () => {
   return (
-    <footer className="border-t border-slate-6 pt-8 mt-8">
-      <p className="text-sm text-slate-9">© Maxim Ignatev, 2024</p>
+    <footer className="border-t border-sand-6 pt-6 mt-8">
+      <div className="flex w-full justify-center sm:hidden text-sm text-sand-8">
+        <a href={`mailto:ignatif@gmail.com`}>ignatif@gmail.com</a>
+      </div>
+      <p className="hidden sm:block text-sm text-sand-9">
+        © Maxim Ignatev, 2024
+      </p>
     </footer>
   )
 }

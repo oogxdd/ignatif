@@ -1,5 +1,7 @@
 import { createContext, useContext, useState, useEffect } from 'react'
 import { Sun as SunIcon, Moon as MoonIcon } from 'lucide-react'
+import { Analytics } from '@vercel/analytics/react'
+import Head from 'next/head'
 import '@/assets/css/index.css'
 
 const ThemeContext = createContext()
@@ -33,9 +35,18 @@ export default function App({ Component, pageProps }) {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <Head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Maxim Ignatev's resume website</title>
+        {/*
+        <meta name="description" content="A short outline of Maxim Ignatev's work history" />
+        */}
+      </Head>
       <div className={theme}>
         <Component {...pageProps} />
         <ThemeToggle />
+        <Analytics />
       </div>
     </ThemeContext.Provider>
   )
