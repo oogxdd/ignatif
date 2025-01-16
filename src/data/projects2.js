@@ -1,0 +1,216 @@
+// mb include: antcmd, movenation, myfit
+export const projects = [
+  {
+    position: 'Front-end engineer',
+    company: 'Nisper',
+    dateStart: '2024',
+    dateEnd: '2024',
+    points: [
+      'Developed an editor for correcting transcripts while preserving word/phrase level timestamps, featuring autosave and offline mode.',
+      'Created dashboard for file upload and folder organization.',
+      'Implemented human-in-the-loop workflow for transcript correction and validation.',
+      'Built multi-tenancy functionality to support workspace isolation for different users or organizations.',
+    ],
+  },
+  {
+    position: 'Full-stack developer',
+    company: 'Mori',
+    dateStart: '2023',
+    dateEnd: '2023',
+    points: [
+      'Built media gallery with AI features including photo restoration, OCR, audio transcription and translation.',
+      "Developed 'MemoryClips': a tool for transforming GEDCOM files into personalized video stories.",
+      'Implemented scalable video rendering using Remotion, AWS Lambda, and S3 services.',
+    ],
+  },
+  {
+    position: 'Founding Engineer',
+    company: 'Machcast',
+    dateStart: '2022',
+    dateEnd: '2023',
+    points: [
+      'Built media pipeline for transforming long videos into short clips.',
+      'Developed frontend and video editor interface with various editing capabilities.',
+      'Created backend service for video editing using ffmpg and fine-tuned GPT for title generation.',
+    ],
+  },
+  {
+    position: 'Frontend developer',
+    company: 'Trialproofer',
+    dateStart: '2022',
+    dateEnd: '2022',
+    points: [
+      'Developed specialized text editor for capturing and organizing legal case specifics.',
+      'Implemented comprehensive note management system for dynamic legal workflows.',
+      'Incorporated domain-specific functionalities for managing various legal entities.',
+    ],
+  },
+  {
+    position: 'Software engineer',
+    company: 'DM6Labs',
+    dateStart: '2022',
+    dateEnd: '2022',
+    points: [
+      'Designed and implemented end-to-end no-code automation flow for telemedicine service.',
+      'Integrated multiple platforms (Shopify, Zoho CRM, Zoho Bookings) using Zappier.',
+      'Provided staff training and instructions for smooth adoption of new workflow.',
+    ],
+  },
+  {
+    position: 'Founder',
+    company: 'styleguide.ist',
+    dateStart: '2021',
+    dateEnd: '2022',
+    points: [
+      'Conceptualized and developed project as solo founder, driving both ideation and implementation.',
+      "Built proof-of-concept demonstrating tool's potential to customers and investors.",
+      'Implemented foundational components with customizable UI parameters.',
+    ],
+  },
+  // {
+  //   position: 'Founder',
+  //   company: 'tldr.app',
+  //   dateStart: '2021',
+  //   dateEnd: '2021',
+  //   points: [
+  //     'Developed unique interaction method for on-the-fly text summarization.',
+  //     'Integrated Huggingface API and DistilBERT model for efficient summarization.',
+  //     'Designed intuitive interface for instant text summarization in browser.',
+  //   ],
+  // },
+  // {
+  //   position: 'Founder',
+  //   company: 'type-j',
+  //   dateStart: '2021',
+  //   dateEnd: '2021',
+  //   points: [
+  //     'Invented iterative text generation approach for progressive content creation.',
+  //     'Developed Chrome extension offering context-aware choices at each writing stage.',
+  //     'Implemented GPT-J integration for AI-powered text suggestions.',
+  //   ],
+  // },
+  // {
+  //   position: 'Founding Engineer',
+  //   company: 'Movenation',
+  //   dateStart: '2021',
+  //   dateEnd: '2021',
+  //   points: [
+  //     'Designed and developed test landing page to evaluate potential user interest.',
+  //     'Analyzed conversion rates to make data-driven decisions about project viability.',
+  //   ],
+  // },
+  {
+    position: 'Full-stack developer',
+    company: 'Calmpaper',
+    dateStart: '2020',
+    dateEnd: '2020',
+    points: [
+      'Led development as technical founder, building the platform from scratch within two weeks.',
+      'Implemented features for chapter-by-chapter book publishing, comments, and user engagement.',
+      'Adapted platform through multiple pivots based on user engagement data and founder vision.',
+    ],
+  },
+  // {
+  //   position: 'Full-stack developer',
+  //   company: 'MyFit',
+  //   dateStart: '2020',
+  //   dateEnd: '2020',
+  //   points: [
+  //     "Developed and released mobile applications using no-code platform 'Bravo Studio'.",
+  //     'Integrated DatoCMS for efficient content management within the application.',
+  //     'Created a Progressive Web Application (PWA) for seamless web access and additional features.',
+  //   ],
+  // },
+  // {
+  //   position: 'Front-end developer',
+  //   company: 'antcmd',
+  //   dateStart: '2020',
+  //   dateEnd: '2020',
+  //   points: [
+  //     'Developed versatile text interface for executing diverse commands within text environment.',
+  //     'Implemented suite of commands for cold email automation, including integrations with various APIs.',
+  //     'Packaged and released the tool as a standalone desktop application using Electron.',
+  //   ],
+  // },
+  {
+    position: 'Full-stack developer',
+    company: 'Voicestory',
+    dateStart: '2018',
+    dateEnd: '2019',
+    points: [
+      'Joined as technical founder to advance development of community-focused chat widget.',
+      'Utilized GetStream API to create a messanging system including group chats, threads, direct messages, notifications and other.',
+      'Implemented multi-tenancy architecture.',
+      'The project was halted down due to inability to find a product-market fit.',
+    ],
+  },
+  // {
+  //   position: 'UI/UX Designer',
+  //   company: 'Hostaway',
+  //   dateStart: '2018',
+  //   dateEnd: '2018',
+  //   points: [
+  //     'Redesign of property management solution dashboard and mobile app.',
+  //     'Led comprehensive redesign of the dashboard, focusing on modern design and improved usability.',
+  //     'Redesigned the mobile application interface to enhance user experience.',
+  //     'Collaborated with developers to ensure accurate implementation of designs.',
+  //   ],
+  // },
+  // {
+  //   position: 'Front-end Developer',
+  //   company: 'Chronos',
+  //   dateStart: '2017',
+  //   dateEnd: '2017',
+  //   points: [
+  //     'Designed and implemented UI/UX for desktop application with deep JIRA integration.',
+  //     'Created Jira extension interface for worklog management and report generation.',
+  //     'Developed marketing page to showcase product features and value propositions.',
+  //   ],
+  // },
+  // {
+  //   position: 'Middle Front-end Developer',
+  //   company: 'Hostaway',
+  //   dateStart: '2016',
+  //   dateEnd: '2017',
+  //   points: [
+  //     'Led development of various dashboard features using React and Redux.',
+  //     'Initiated and drove the development of the mobile application using React Native.',
+  //     'Provided mentorship and guidance to junior developers on the team.',
+  //   ],
+  // },
+  // {
+  //   position: 'Junior Front-end Developer',
+  //   company: 'Zenkraft Deliverable',
+  //   dateStart: '2016',
+  //   dateEnd: '2016',
+  //   points: [
+  //     'Developed frontend features using React and Redux within the Salesforce framework.',
+  //     'Implemented responsive designs using SCSS for improved user experience.',
+  //     'Worked closely with backend developers to integrate new features seamlessly.',
+  //   ],
+  // },
+  // {
+  //   position: 'Junior Mobile Developer',
+  //   company: 'Hypefactors',
+  //   dateStart: '2016',
+  //   dateEnd: '2016',
+  //   points: [
+  //     'Implemented React Native interface based on provided design specifications.',
+  //     'Integrated backend APIs to ensure smooth data flow within the application.',
+  //     'Collaborated with backend team to optimize data retrieval and display.',
+  //   ],
+  // },
+
+  {
+    position: 'Junior/Middle Developer',
+    company: 'Web-pal',
+    dateStart: '2016-04-01',
+    dateEnd: '2018-06-01',
+    points: [
+      'Advanced from a junior developer position to a middle-level role, eventually taking on leadership duties and guiding my first junior developer.',
+      // 'Progressed from a junior developer role, eventually leading and mentoring my first junior developer.',
+      'Engaged in a mix of outsourced client projects and development of internal agency tools.',
+      'Worked collaboratively with a team, contributing to various projects and ensuring client satisfaction.',
+    ],
+  },
+]

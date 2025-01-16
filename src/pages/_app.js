@@ -45,8 +45,10 @@ export default function App({ Component, pageProps }) {
       </Head>
       <div className={theme}>
         <Component {...pageProps} />
+        {/*
         <ThemeToggle />
         <Analytics />
+        */}
       </div>
     </ThemeContext.Provider>
   )
