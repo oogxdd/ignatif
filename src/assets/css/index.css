@@ -15,3 +15,24 @@
 body {
   background-color: var(--sand-1);
 }
+
+.break-before-\[always\] {
+  break-before: always;
+  -webkit-break-before: always;
+  -moz-break-before: always;
+  page-break-before: always; /* For older browsers */
+}
+
+.break-after-\[always\] {
+  break-after: always;
+  -webkit-break-after: always;
+  -moz-break-after: always;
+  page-break-after: always; /* For older browsers */
+}
+
+.break-inside-\[avoid\] {
+  break-inside: avoid;
+  -webkit-break-inside: avoid;
+  -moz-break-inside: avoid;
+  page-break-inside: avoid; /* For older browsers */
+}
